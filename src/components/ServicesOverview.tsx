@@ -18,14 +18,14 @@ const ServicesOverview = () => {
     },
     {
       icon: Brain,
-      title: "AI Consulting Services",
-      description: "Strategic AI roadmaps, opportunity identification, and ROI-driven implementations.",
+      title: "Applied AI Services",
+      description: "Custom AI development, machine learning models, and intelligent automation solutions.",
       features: [
-        "Opportunity Identification",
-        "Tailored AI Roadmaps",
-        "ROI Analysis & Prioritization"
+        "Custom ML Models",
+        "Computer Vision & NLP",
+        "Real-time AI Systems"
       ],
-      link: "/services/ai-consulting"
+      link: "/services/applied-ai-services"
     },
     {
       icon: Users,

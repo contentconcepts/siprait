@@ -17,7 +17,7 @@ const Navigation = () => {
 
   const services = [
     { name: "Software Development", href: "/services/software-development" },
-    { name: "AI Consulting Services", href: "/services/ai-consulting" },
+    { name: "Applied AI Services", href: "/services/applied-ai-services" },
     { name: "IT Staffing", href: "/services/it-staffing" },
     { name: "Cyber Security", href: "/services/cybersecurity" },
   ];

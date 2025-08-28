@@ -18,7 +18,7 @@ const KeyFeaturesSection = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI Consulting Services",
+      title: "Applied AI Services",
       description: "Unlock strategic growth with tailored AI strategies and analytics.",
       color: "text-accent"
     },

@@ -54,7 +54,7 @@ const ContactSection = () => {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="software-development">Software Development</SelectItem>
-                      <SelectItem value="ai-consulting">AI Consulting</SelectItem>
+                      <SelectItem value="applied-ai">Applied AI Services</SelectItem>
                       <SelectItem value="cybersecurity">Cybersecurity</SelectItem>
                       <SelectItem value="it-staffing">IT Staffing</SelectItem>
                       <SelectItem value="odc-setup">ODC Setup</SelectItem>

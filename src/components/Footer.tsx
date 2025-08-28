@@ -5,7 +5,7 @@ import { Mail, Phone, Linkedin, Twitter, Github } from "lucide-react";
 const Footer = () => {
   const services = [
     { name: "Software Development", href: "/services/software-development" },
-    { name: "AI Consulting", href: "/services/ai-consulting" },
+    { name: "Applied AI Services", href: "/services/applied-ai-services" },
     { name: "Cybersecurity", href: "/services/cybersecurity" },
     { name: "IT Staffing", href: "/services/it-staffing" },
   ];
