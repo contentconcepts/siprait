@@ -1,20 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-accent/80"></div>
       </div>
 
@@ -45,36 +40,23 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-white/80">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">98%</div>
-              <div className="text-white/80">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-white/80">Support Available</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
-              <div className="text-white/80">Years Experience</div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent-light/50 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-accent/60 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent-light/50 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-accent/60 rounded-full animate-pulse" style={{
+        animationDelay: '0.5s'
+      }}></div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
