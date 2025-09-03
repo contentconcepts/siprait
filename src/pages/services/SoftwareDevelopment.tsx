@@ -73,38 +73,23 @@ const SoftwareDevelopment = () => {
   const methodology = [
     {
       step: 1,
-      title: "Domain Understanding",
-      description: "Deep dive into your industry to create perfectly tailored solutions"
+      title: "Waterfall",
+      description: "Structured planning methodology for predictable, compliance-heavy projects requiring comprehensive documentation and sequential development phases"
     },
     {
       step: 2,
-      title: "Technology Selection",
-      description: "Choose optimal technology stacks for your specific use case and requirements"
+      title: "Agile Frameworks",
+      description: "Iterative, AI-supported Scrum, Scrumban, and Kanban delivery approaches for flexible, responsive development cycles"
     },
     {
       step: 3,
-      title: "Custom Software Development",
-      description: "Build innovative web, mobile, and enterprise applications with AI integration"
+      title: "Test-Driven Development",
+      description: "AI-driven testing methodologies ensuring superior code quality, reliability, and continuous integration throughout the development lifecycle"
     },
     {
       step: 4,
-      title: "On-Premises Setup",
-      description: "Establish secure, scalable in-house teams with seamless AI integration"
-    },
-    {
-      step: 5,
-      title: "ODC Setup",
-      description: "Create cost-effective offshore development teams with transparent governance"
-    },
-    {
-      step: 6,
-      title: "AI Integration",
-      description: "Automate and optimize business processes with cutting-edge AI solutions"
-    },
-    {
-      step: 7,
-      title: "Continuous Improvement",
-      description: "Implement regular feedback loops for ongoing optimization and enhancement"
+      title: "Custom Hybrid Models",
+      description: "Tailored workflow combinations integrating AI capabilities with Agile and Waterfall methodologies for optimal project outcomes"
     }
   ];
 
@@ -203,9 +188,12 @@ const SoftwareDevelopment = () => {
             <p className="text-muted-foreground mt-4 max-w-4xl mx-auto">
               Our systematic approach ensures every project delivers exceptional results through proven methodologies and cutting-edge technology integration.
             </p>
+            <p className="text-primary font-semibold mt-6 text-lg">
+              Experience AI-powered project success with SipraHub!
+            </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {methodology.map((step, index) => (
               <Card key={index} className="text-center border-border bg-card hover:shadow-lg transition-all duration-300">
                 <CardHeader className="pb-4">
