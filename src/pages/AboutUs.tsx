@@ -5,8 +5,8 @@ import { Quote, Target, Eye, Heart, CheckCircle, Star, Award } from "lucide-reac
 import aboutHero from "@/assets/about-hero.jpg";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import missionVision from "@/assets/mission-vision.jpg";
-import prasannaHeadshot from "@/assets/prasanna-headshot.jpg";
-import senthilHeadshot from "@/assets/senthil-headshot.jpg";
+import prasannaHeadshot from "/lovable-uploads/6e0bce80-e062-44ce-aae6-b11c691642e9.png";
+import senthilHeadshot from "/lovable-uploads/d5656f33-44b5-47fc-b32b-ae0db542c2ae.png";
 import parthasarathyHeadshot from "@/assets/parthasarathy-headshot.jpg";
 
 const AboutUs = () => {
