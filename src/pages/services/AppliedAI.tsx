@@ -196,14 +196,14 @@ const AppliedAI = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+            <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
               Applied AI Services
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Applied AI Services
-              <span className="block text-accent-light">Intelligent Solutions for Your Business</span>
+              <span className="block text-orange-300">Intelligent Solutions for Your Business</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
               Build bespoke AI solutions designed specifically for your business needs. From machine learning models to advanced neural networks, we create high-performance AI systems that deliver measurable results.
             </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">

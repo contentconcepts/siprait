@@ -141,14 +141,14 @@ const Blog = () => {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
               Blog
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Thought Leadership in{" "}
-              <span className="text-primary-light">AI and Technology</span>
+              <span className="text-orange-300">AI and Technology</span>
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
               Stay informed with SipraHub's expert insights, industry analysis,
               and practical knowledge for your digital transformation journey.
             </p>

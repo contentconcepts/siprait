@@ -19,15 +19,15 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             AI-Driven Digital
-            <span className="block bg-gradient-to-r from-white to-accent-light bg-clip-text text-transparent">
+            <span className="block text-orange-300">
               Transformation
             </span>
-            <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold mt-4">
+            <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-white">
               Domain Expertise, and Scalable Operations
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
             Empowering businesses with innovative solutions, robust processes, and scalable 
             on-prem and offshore delivery models.
           </p>

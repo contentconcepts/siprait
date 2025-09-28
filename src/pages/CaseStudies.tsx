@@ -170,14 +170,14 @@ const CaseStudies = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
               Case Studies
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Real Results Across{" "}
-              <span className="text-primary-light">Domains and Technologies</span>
+              <span className="text-orange-300">Domains and Technologies</span>
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
               Discover how SipraHub drives measurable success with tailored solutions across 
               industries and technologies. See the impact of our AI-powered innovations.
             </p>

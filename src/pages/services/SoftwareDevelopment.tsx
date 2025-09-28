@@ -197,14 +197,14 @@ const SoftwareDevelopment = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+            <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
               Software Development
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Software Development Services
-              <span className="block text-accent-light">Building Your AI-Powered Vision</span>
+              <span className="block text-orange-300">Building Your AI-Powered Vision</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
               Transform your business with innovative, scalable, and secure software solutions that leverage cutting-edge AI technology to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">

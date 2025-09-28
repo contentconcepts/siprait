@@ -212,14 +212,14 @@ const CloudInfra = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+            <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
               Cloud & Infrastructure Services
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Harness the Power of{" "}
-              <span className="block text-accent-light">Cloud Technology</span>
+              <span className="block text-orange-300">Cloud Technology</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
               We empower businesses to seamlessly transition to the cloud, ensuring minimal disruption and maximum efficiency. Our comprehensive cloud and infrastructure services are designed to optimize performance, enhance security, and scale with your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
