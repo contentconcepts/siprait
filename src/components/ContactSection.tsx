@@ -16,8 +16,7 @@ const ContactSection = () => {
             <span className="text-primary">Scale Together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Start your AI-driven transformation with SipraHub today! 
-            Get in touch with our experts to discuss your project requirements.
+            Start your AI-driven transformation with SipraHub today!
           </p>
         </div>
 
@@ -55,8 +54,9 @@ const ContactSection = () => {
                     <SelectContent>
                       <SelectItem value="software-development">Software Development</SelectItem>
                       <SelectItem value="applied-ai">Applied AI Services</SelectItem>
+                      <SelectItem value="ai-consulting">AI Consulting Services</SelectItem>
                       <SelectItem value="cybersecurity">Cybersecurity</SelectItem>
-                      <SelectItem value="it-staffing">IT Staffing</SelectItem>
+                      <SelectItem value="cloud-infrastructure">Cloud & Infrastructure</SelectItem>
                       <SelectItem value="odc-setup">ODC Setup</SelectItem>
                       <SelectItem value="maintenance">System Maintenance</SelectItem>
                     </SelectContent>
@@ -87,8 +87,8 @@ const ContactSection = () => {
                   </Select>
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full">
-                  <Send className="mr-2 h-5 w-5" />
+                <Button variant="hero" size="lg" className="w-full text-lg font-semibold px-6 py-4 bg-primary hover:bg-primary/90 shadow-lg">
+                  <Send className="mr-3 h-6 w-6" />
                   Send Message
                 </Button>
               </form>

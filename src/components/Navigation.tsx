@@ -14,11 +14,14 @@ const Navigation = () => {
     name: "Applied AI Services",
     href: "/services/applied-ai-services"
   }, {
-    name: "IT Staffing",
-    href: "/services/it-staffing"
+    name: "AI Consulting Services",
+    href: "/services/ai-consulting"
   }, {
-    name: "Cyber Security",
+    name: "Cybersecurity",
     href: "/services/cybersecurity"
+  }, {
+    name: "Cloud & Infrastructure",
+    href: "/services/cloud-infra"
   }];
   return <nav className="bg-white/95 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,21 +58,24 @@ const Navigation = () => {
             </DropdownMenu>
 
             
-            <Link to="/case-studies" className={`text-sm font-medium transition-smooth ${isActive("/case-studies") ? "text-primary" : "text-foreground hover:text-primary"}`}>
-              Case Studies
-            </Link>
-            <Link to="/blog" className={`text-sm font-medium transition-smooth ${isActive("/blog") ? "text-primary" : "text-foreground hover:text-primary"}`}>
-              Blog
-            </Link>
+                    <Link to="/case-studies" className={`text-sm font-medium transition-smooth ${isActive("/case-studies") ? "text-primary" : "text-foreground hover:text-primary"}`}>
+                      Case Studies
+                    </Link>
+                    <Link to="/blog" className={`text-sm font-medium transition-smooth ${isActive("/blog") ? "text-primary" : "text-foreground hover:text-primary"}`}>
+                      Blog
+                    </Link>
+                    <Link to="/resources" className={`text-sm font-medium transition-smooth ${isActive("/resources") ? "text-primary" : "text-foreground hover:text-primary"}`}>
+                      Resources
+                    </Link>
             
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="hero" size="lg" asChild className="text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg">
               <Link to="/contact">Get Free Consultation</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="w-12 h-12 bg-primary/10 hover:bg-primary/20 border border-primary/20">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
@@ -91,17 +97,17 @@ const Navigation = () => {
                 </Link>)}
             </div>
             
-            <Link to="/industries" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
-              Industries
-            </Link>
             <Link to="/case-studies" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
               Case Studies
             </Link>
             <Link to="/blog" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
               Blog
             </Link>
+            <Link to="/resources" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+              Resources
+            </Link>
             
-            <Button variant="hero" size="sm" className="w-full" asChild>
+            <Button variant="hero" size="lg" className="w-full text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg" asChild>
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 Get Free Consultation
               </Link>

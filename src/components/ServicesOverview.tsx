@@ -29,14 +29,14 @@ const ServicesOverview = () => {
     },
     {
       icon: Users,
-      title: "IT Staffing",
-      description: "Flexible staffing models with specialized talent in AI, cloud, and emerging technologies.",
+      title: "Cloud & Infrastructure",
+      description: "Comprehensive cloud solutions and infrastructure services for scalable business growth.",
       features: [
-        "Contract & Permanent Solutions",
-        "AI & Cloud Expertise",
-        "Global Delivery Models"
+        "Cloud Setup & Migration",
+        "Infrastructure Management",
+        "Scalable Solutions"
       ],
-      link: "/services/it-staffing"
+      link: "/services/cloud-infra"
     },
     {
       icon: Shield,
@@ -95,10 +95,10 @@ const ServicesOverview = () => {
                   ))}
                 </ul>
 
-                <Button variant="outline" asChild className="w-full group-hover:bg-primary group-hover:text-white transition-smooth">
+                <Button variant="outline" size="lg" asChild className="w-full">
                   <Link to={service.link}>
                     Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-3 h-5 w-5" />
                   </Link>
                 </Button>
               </CardContent>
@@ -107,10 +107,10 @@ const ServicesOverview = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg" asChild>
+          <Button variant="hero" size="xl" asChild className="text-xl font-semibold px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg">
             <Link to="/services">
               Explore All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-3 h-6 w-6" />
             </Link>
           </Button>
         </div>

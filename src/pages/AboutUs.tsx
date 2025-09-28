@@ -68,7 +68,7 @@ const AboutUs = () => {
             About <span className="text-accent-bright">SipraHub</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            We are a team of three founders with a combined experience of over <span className="text-accent-bright font-semibold">90 years</span> in providing cutting-edge AI-powered software development solutions.
+            SipraHub - AI-Driven Digital Transformation & IT Services
           </p>
         </div>
       </section>
