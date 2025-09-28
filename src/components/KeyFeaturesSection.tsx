@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { 
   Brain, 
   Globe, 
@@ -18,7 +19,7 @@ const KeyFeaturesSection = () => {
   const features = [
     {
       icon: Brain,
-      title: "Applied AI Services",
+      title: "AI Consulting Services",
       description: "Unlock strategic growth with tailored AI strategies and analytics.",
       color: "text-accent"
     },
@@ -39,42 +40,6 @@ const KeyFeaturesSection = () => {
       title: "AI-Driven Digital Transformation",
       description: "Automate processes and enhance customer experiences with AI.",
       color: "text-accent"
-    },
-    {
-      icon: Code,
-      title: "Custom Software Development",
-      description: "Build and maintain innovative, user-friendly applications.",
-      color: "text-primary"
-    },
-    {
-      icon: RefreshCw,
-      title: "Legacy Systems Modernization",
-      description: "Re-engineer systems for scalability and efficiency.",
-      color: "text-success"
-    },
-    {
-      icon: Building,
-      title: "On-Prem Setup & Management",
-      description: "Secure, high-performing in-house teams for enterprise needs.",
-      color: "text-accent"
-    },
-    {
-      icon: Users,
-      title: "ODC Setup & Management",
-      description: "Cost-efficient, transparent offshore centers for scalability.",
-      color: "text-primary"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Protect your business with AI-driven threat detection and security.",
-      color: "text-success"
-    },
-    {
-      icon: UserCheck,
-      title: "IT Staffing",
-      description: "Scale with specialized talent in AI, cloud, and emerging technologies.",
-      color: "text-accent"
     }
   ];
 
@@ -91,7 +56,7 @@ const KeyFeaturesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => (
             <Card 
               key={index} 
@@ -117,9 +82,11 @@ const KeyFeaturesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg" className="group">
-            Learn More About Our Services
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="lg" className="group" asChild>
+            <Link to="/about">
+              Learn More →
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
 

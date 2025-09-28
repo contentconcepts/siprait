@@ -6,8 +6,9 @@ const Footer = () => {
   const services = [
     { name: "Software Development", href: "/services/software-development" },
     { name: "Applied AI Services", href: "/services/applied-ai-services" },
+    { name: "AI Consulting Services", href: "/services/ai-consulting" },
     { name: "Cybersecurity", href: "/services/cybersecurity" },
-    { name: "IT Staffing", href: "/services/it-staffing" },
+    { name: "Cloud & Infrastructure", href: "/services/cloud-infra" },
   ];
 
   const company = [
@@ -34,14 +35,14 @@ const Footer = () => {
               delivering innovative solutions that drive measurable business growth.
             </p>
             <div className="flex space-x-4">
-              <Button variant="glass" size="icon">
-                <Linkedin className="h-4 w-4" />
+              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+                <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="glass" size="icon">
-                <Twitter className="h-4 w-4" />
+              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+                <Twitter className="h-5 w-5" />
               </Button>
-              <Button variant="glass" size="icon">
-                <Github className="h-4 w-4" />
+              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+                <Github className="h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -93,7 +94,7 @@ const Footer = () => {
                 <span className="text-white/80 text-sm">+1-800-SIPRAHUB</span>
               </div>
             </div>
-            <Button variant="glass" className="mt-6 w-full" asChild>
+            <Button variant="glass" size="lg" className="mt-6 w-full text-lg font-semibold px-6 py-3 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg" asChild>
               <Link to="/contact">Get Free Consultation</Link>
             </Button>
           </div>

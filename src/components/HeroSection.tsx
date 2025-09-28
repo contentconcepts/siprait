@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -18,24 +19,31 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             AI-Driven Digital
-            <span className="block bg-gradient-to-r from-white to-accent-light bg-clip-text text-transparent">
+            <span className="block text-orange-300">
               Transformation
+            </span>
+            <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-white">
+              Domain Expertise, and Scalable Operations
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
             Empowering businesses with innovative solutions, robust processes, and scalable 
-            on-prem and offshore delivery models through domain expertise and cutting-edge technology.
+            on-prem and offshore delivery models.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="glass" size="xl" className="group">
-              Explore Our Expertise
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="glass" size="xl" className="group" asChild>
+              <Link to="/services">
+                Explore Our Expertise →
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
-            <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Play className="mr-2 h-5 w-5" />
-              Get Free Consultation
+            <Button variant="outline-white" size="xl" asChild>
+              <Link to="/contact">
+                <Play className="mr-2 h-5 w-5" />
+                Get a Free Consultation →
+              </Link>
             </Button>
           </div>
 

@@ -1,177 +1,190 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Brain, Code, Zap, Shield, Target, Clock, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import {
+  Brain,
+  Target,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Zap,
+  Globe,
+  Settings,
+  BarChart3,
+  Lightbulb,
+  Search
+} from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
-import missionImage from "@/assets/mission-vision.jpg";
+import aboutImage from "@/assets/about-hero.jpg";
 
-const AppliedAI = () => {
+const AIConsulting = () => {
   const capabilities = [
     {
-      icon: Brain,
-      title: "Machine Learning Models",
-      description: "Custom ML algorithms for prediction, classification, and pattern recognition",
-      technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost"]
-    },
-    {
-      icon: Code,
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, chatbots, and language understanding",
-      technologies: ["BERT", "GPT", "Transformers", "spaCy"]
+      icon: Search,
+      title: "Opportunity Identification",
+      description: "Uncover high-impact AI opportunities in your operations through comprehensive analysis of your business processes, data assets, and competitive landscape.",
+      technologies: ["Business Process Analysis", "Data Assessment", "Competitive Intelligence", "Opportunity Mapping"]
     },
     {
       icon: Target,
-      title: "Computer Vision",
-      description: "Image and video analysis, object detection, and visual recognition systems",
-      technologies: ["OpenCV", "YOLO", "ResNet", "CNN"]
+      title: "Strategic Roadmaps",
+      description: "Develop AI strategies aligned with your business goals, including implementation timelines, resource allocation, and success metrics.",
+      technologies: ["Strategic Planning", "Implementation Roadmaps", "Resource Planning", "Success Metrics"]
     },
     {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "Forecasting models for business intelligence and decision support",
-      technologies: ["Time Series", "Regression", "Neural Networks", "Ensemble Methods"]
+      icon: TrendingUp,
+      title: "ROI Analysis",
+      description: "Prioritize initiatives with AI-driven analytics for maximum returns, providing detailed cost-benefit analysis and projected outcomes.",
+      technologies: ["Cost-Benefit Analysis", "ROI Modeling", "Performance Forecasting", "Value Assessment"]
     },
     {
-      icon: Shield,
-      title: "Deep Learning",
-      description: "Complex neural networks for advanced pattern recognition and decision making",
-      technologies: ["Deep Neural Networks", "CNNs", "RNNs", "GANs"]
+      icon: BarChart3,
+      title: "AI Strategy Development",
+      description: "Create comprehensive AI strategies that align with your business objectives and market positioning.",
+      technologies: ["Strategic Planning", "Market Analysis", "Technology Selection", "Implementation Planning"]
     },
     {
-      icon: Clock,
-      title: "Real-time AI",
-      description: "Low-latency AI systems for real-time processing and decision making",
-      technologies: ["Edge Computing", "Model Optimization", "Streaming", "APIs"]
+      icon: Lightbulb,
+      title: "Innovation Consulting",
+      description: "Identify emerging AI technologies and trends that can provide competitive advantages for your business.",
+      technologies: ["Technology Trends", "Innovation Assessment", "Competitive Analysis", "Future Planning"]
+    },
+    {
+      icon: Users,
+      title: "Change Management",
+      description: "Guide your organization through AI transformation with change management strategies and training programs.",
+      technologies: ["Change Strategy", "Training Programs", "Organizational Design", "Culture Transformation"]
     }
   ];
 
   const whyChoose = [
     {
+      title: "Strategic Expertise",
+      description: "Deep understanding of AI technologies and their business applications across industries"
+    },
+    {
+      title: "Proven Methodologies",
+      description: "Time-tested frameworks and approaches for successful AI transformation"
+    },
+    {
+      title: "Industry Knowledge",
+      description: "Specialized expertise across healthcare, finance, retail, and manufacturing sectors"
+    },
+    {
       title: "Custom Solutions",
-      description: "Tailored AI models designed specifically for your unique business requirements and data"
+      description: "Tailored strategies that align with your unique business goals and constraints"
     },
     {
-      title: "Cutting-edge Technology",
-      description: "Latest AI frameworks and techniques ensuring state-of-the-art performance"
+      title: "End-to-End Support",
+      description: "Comprehensive support from strategy development to implementation and optimization"
     },
     {
-      title: "Enterprise Security",
-      description: "Built-in security measures, data privacy protection, and compliance standards"
-    },
-    {
-      title: "Scalable Architecture",
-      description: "Cloud-native design that scales with your business growth and data volume"
-    },
-    {
-      title: "Rigorous Testing",
-      description: "Comprehensive testing methodology ensuring reliability and accuracy"
-    },
-    {
-      title: "Fast Deployment",
-      description: "Streamlined deployment process with minimal disruption to existing systems"
+      title: "Measurable Results",
+      description: "Clear metrics and KPIs to track progress and demonstrate value"
     }
   ];
 
   const methodology = [
     {
       step: "01",
-      title: "Requirements Analysis",
+      title: "Discovery & Assessment",
       duration: "2-3 weeks",
-      description: "Deep dive into your specific needs, data, and technical requirements",
-      items: ["Use case definition", "Data assessment", "Technical architecture", "Performance requirements"]
+      description: "Understanding your AI readiness and identifying opportunities for transformation",
+      items: ["Business process analysis", "Technology assessment", "Data readiness evaluation", "Competitive analysis"]
     },
     {
       step: "02",
-      title: "Model Design & Prototyping",
-      duration: "4-6 weeks",
-      description: "Design AI models and create proof-of-concept prototypes",
-      items: ["Algorithm selection", "Model architecture", "Prototype development", "Feasibility validation"]
+      title: "Strategy Development",
+      duration: "3-4 weeks",
+      description: "Creating comprehensive AI strategies aligned with your business objectives",
+      items: ["Strategic roadmap creation", "Technology selection", "Implementation planning", "Risk assessment"]
     },
     {
       step: "03",
-      title: "Development & Training",
-      duration: "8-12 weeks",
-      description: "Full-scale development with iterative training and optimization",
-      items: ["Model implementation", "Training pipeline", "Hyperparameter tuning", "Performance optimization"]
+      title: "ROI Analysis & Prioritization",
+      duration: "2-3 weeks",
+      description: "Evaluating potential returns and prioritizing initiatives for maximum impact",
+      items: ["Cost-benefit analysis", "ROI modeling", "Initiative prioritization", "Resource planning"]
     },
     {
       step: "04",
-      title: "Testing & Deployment",
+      title: "Implementation Planning",
       duration: "3-4 weeks",
-      description: "Comprehensive testing, integration, and production deployment",
-      items: ["Quality assurance", "Integration testing", "Production deployment", "Monitoring setup"]
+      description: "Detailed planning for AI implementation with timelines and milestones",
+      items: ["Project planning", "Resource allocation", "Timeline creation", "Success metrics"]
     },
     {
       step: "05",
-      title: "Optimization & Support",
+      title: "Ongoing Support",
       duration: "Ongoing",
-      description: "Ongoing monitoring, optimization, and maintenance support",
-      items: ["Performance monitoring", "Model retraining", "Feature enhancements", "Technical support"]
+      description: "Continuous support and optimization throughout your AI transformation journey",
+      items: ["Progress monitoring", "Strategy adjustments", "Performance optimization", "Change management"]
     }
   ];
 
   const caseStudies = [
     {
-      industry: "E-commerce",
-      company: "ShopSmart Retail",
-      challenge: "Improving product recommendations and inventory management",
-      solution: "Developed personalized recommendation engine and demand forecasting system",
-      technologies: ["Collaborative Filtering", "Deep Learning", "Time Series Analysis", "Real-time Processing"],
-      quote: "The custom AI solution transformed our entire business model. Sales have never been higher and our customers love the personalized experience.",
-      metrics: [
-        { label: "Sales conversion increase", value: "45%" },
-        { label: "Inventory cost reduction", value: "30%" },
-        { label: "Recommendation accuracy", value: "85%" },
-        { label: "Customer engagement", value: "2.3x" }
-      ],
-      stats: {
-        developmentTime: "16 weeks",
-        roi: "320% in first year",
-        accuracy: "91.5%",
-        performance: "<100ms response time"
-      }
-    },
-    {
       industry: "Healthcare",
-      company: "DiagnosticAI Labs",
-      challenge: "Automating medical image analysis for faster, more accurate diagnoses",
-      solution: "Built computer vision system for X-ray and MRI analysis with diagnostic assistance",
-      technologies: ["Convolutional Neural Networks", "Transfer Learning", "Image Segmentation", "DICOM Processing"],
-      quote: "This AI system has revolutionized our diagnostic workflow. We can now process more cases with higher accuracy than ever before.",
+      company: "MedCare Systems",
+      challenge: "Developing AI strategy for improving patient outcomes and operational efficiency",
+      solution: "Created comprehensive AI roadmap focusing on predictive analytics and automated diagnostics",
+      technologies: ["Predictive Analytics", "Machine Learning", "Data Integration", "Clinical Decision Support"],
+      quote: "The AI strategy provided clear direction for our digital transformation. We've seen significant improvements in patient care and operational efficiency.",
       metrics: [
-        { label: "Diagnostic accuracy", value: "92%" },
-        { label: "Faster analysis time", value: "75%" },
-        { label: "FDA compliance", value: "Achieved" },
-        { label: "Hospital integrations", value: "5 systems" }
+        { label: "Patient outcome improvement", value: "35%" },
+        { label: "Operational cost reduction", value: "25%" },
+        { label: "Diagnostic accuracy increase", value: "40%" },
+        { label: "Staff productivity gain", value: "30%" }
       ],
       stats: {
-        developmentTime: "20 weeks",
-        roi: "250% cost savings",
-        accuracy: "94.2%",
-        performance: "3 seconds per scan"
+        developmentTime: "12 weeks",
+        roi: "280% in first year",
+        accuracy: "94% prediction accuracy",
+        performance: "3x faster diagnosis"
       }
     },
     {
       industry: "Financial Services",
-      company: "InvestPro Analytics",
-      challenge: "Creating intelligent trading algorithms and risk assessment models",
-      solution: "Developed ML-powered trading system with real-time risk analysis and portfolio optimization",
-      technologies: ["Reinforcement Learning", "Time Series Forecasting", "Risk Modeling", "High-Frequency Trading"],
-      quote: "The AI trading system consistently outperforms traditional methods and has become central to our investment strategy.",
+      company: "FinanceFirst Bank",
+      challenge: "Implementing AI-driven risk management and fraud detection strategy",
+      solution: "Developed comprehensive AI strategy for enhanced security and customer experience",
+      technologies: ["Risk Modeling", "Fraud Detection", "Customer Analytics", "Regulatory Compliance"],
+      quote: "The AI consulting approach helped us transform our risk management capabilities while maintaining regulatory compliance.",
       metrics: [
-        { label: "Trading performance improvement", value: "28%" },
-        { label: "Risk exposure reduction", value: "65%" },
-        { label: "Portfolio managed", value: "$50M" },
-        { label: "System uptime", value: "99.9%" }
+        { label: "Fraud detection improvement", value: "60%" },
+        { label: "Risk assessment accuracy", value: "45%" },
+        { label: "Customer satisfaction", value: "25%" },
+        { label: "Compliance efficiency", value: "50%" }
       ],
       stats: {
-        developmentTime: "24 weeks",
-        roi: "480% performance improvement",
-        accuracy: "89.3% prediction rate",
-        performance: "<5ms execution time"
+        developmentTime: "16 weeks",
+        roi: "350% cost savings",
+        accuracy: "98% fraud detection",
+        performance: "Real-time processing"
+      }
+    },
+    {
+      industry: "Manufacturing",
+      company: "IndustrialTech Corp",
+      challenge: "Creating AI strategy for predictive maintenance and quality control",
+      solution: "Designed AI roadmap for IoT integration and predictive analytics in manufacturing",
+      technologies: ["Predictive Maintenance", "IoT Integration", "Quality Control", "Supply Chain Optimization"],
+      quote: "The AI strategy transformed our manufacturing operations. We now have predictive capabilities that prevent costly downtime.",
+      metrics: [
+        { label: "Downtime reduction", value: "50%" },
+        { label: "Quality improvement", value: "35%" },
+        { label: "Maintenance cost savings", value: "40%" },
+        { label: "Production efficiency", value: "25%" }
+      ],
+      stats: {
+        developmentTime: "20 weeks",
+        roi: "420% ROI achieved",
+        accuracy: "96% prediction accuracy",
+        performance: "99.5% uptime"
       }
     }
   ];
@@ -185,7 +198,7 @@ const AppliedAI = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${missionImage})`,
+            backgroundImage: `url(${aboutImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -197,49 +210,50 @@ const AppliedAI = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
-              Applied AI Services
+              AI Consulting Services
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Applied AI Services
-              <span className="block text-orange-300">Intelligent Solutions for Your Business</span>
+              AI Consulting Services
+              <span className="block text-orange-300">Strategic Growth Through AI</span>
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
-              Build bespoke AI solutions designed specifically for your business needs. From machine learning models to advanced neural networks, we create high-performance AI systems that deliver measurable results.
+              Unlock strategic growth with tailored AI strategies and analytics. Transform your business 
+              with data-driven insights and intelligent automation.
             </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-            <Button variant="hero" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
-              <Link to="/contact">
-                Start Your AI Project
-                <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
-            </Button>
-            <Button variant="outline-white" size="xl" asChild>
-              <Link to="/case-studies">
-                View Technical Portfolio
-              </Link>
-            </Button>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mt-12">
-            {["Machine Learning", "Deep Learning", "Computer Vision", "NLP", "Predictive Analytics"].map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-white/10 text-white border-white/20 px-4 py-2">
-                {tech}
-              </Badge>
-            ))}
-          </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+                <Link to="/contact">
+                  Get Free Consultation
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
+              <Button variant="outline-white" size="xl" asChild>
+                <Link to="/blog">
+                  Download AI Strategy Guide
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
+              {["Strategy Development", "ROI Analysis", "Implementation Planning", "Change Management", "Performance Optimization"].map((tech) => (
+                <Badge key={tech} variant="secondary" className="bg-white/10 text-white border-white/20 px-4 py-2">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AI Development Capabilities */}
+      {/* AI Consulting Capabilities */}
       <section className="py-20 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              AI Development <span className="text-primary">Capabilities</span>
+              AI Consulting <span className="text-primary">Capabilities</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive AI development services covering the full spectrum of artificial intelligence technologies and applications.
+              Comprehensive AI consulting services covering the full spectrum of strategic AI transformation and implementation.
             </p>
           </div>
 
@@ -270,15 +284,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Why Choose Our AI Development */}
+      {/* Why Choose Our AI Consulting */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Why Choose Our <span className="text-primary">AI Development</span>
+              Why Choose Our <span className="text-primary">AI Consulting</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading expertise combined with cutting-edge technology to deliver AI solutions that exceed expectations.
+              Industry-leading expertise combined with proven methodologies to deliver AI strategies that drive measurable results.
             </p>
           </div>
 
@@ -300,15 +314,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Development Methodology */}
+      {/* Consulting Methodology */}
       <section className="py-20 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Development <span className="text-primary">Methodology</span>
+              Consulting <span className="text-primary">Methodology</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our proven development process ensures high-quality AI solutions delivered on time and within budget.
+              Our proven consulting process ensures successful AI transformation from strategy to implementation.
             </p>
           </div>
 
@@ -351,15 +365,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Technical Case Studies */}
+      {/* Consulting Case Studies */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Technical <span className="text-primary">Case Studies</span>
+              Consulting <span className="text-primary">Case Studies</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Real-world AI development projects showcasing our technical expertise and innovative solutions across industries.
+              Real-world AI consulting projects showcasing our strategic expertise and successful transformations across industries.
             </p>
           </div>
 
@@ -414,7 +428,7 @@ const AppliedAI = () => {
                       
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <span className="font-medium">Development Time:</span> {study.stats.developmentTime}
+                          <span className="font-medium">Consulting Duration:</span> {study.stats.developmentTime}
                         </div>
                         <div>
                           <span className="font-medium">ROI:</span> {study.stats.roi}
@@ -439,15 +453,15 @@ const AppliedAI = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of companies that have accelerated their growth with our AI-powered solutions. Let's discuss how we can help you achieve your digital transformation goals.
+            Join hundreds of companies that have accelerated their growth with our AI consulting services. Let's discuss how we can help you achieve your AI transformation goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
-                Start Your Project
+                Start Your AI Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -468,4 +482,4 @@ const AppliedAI = () => {
   );
 };
 
-export default AppliedAI;
+export default AIConsulting;

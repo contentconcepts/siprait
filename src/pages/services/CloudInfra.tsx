@@ -1,177 +1,193 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Brain, Code, Zap, Shield, Target, Clock, CheckCircle } from "lucide-react";
+import {
+  Cloud,
+  Server,
+  Database,
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Globe,
+  Settings,
+  Users,
+  Mail,
+  FileText,
+  Building,
+  Lock,
+  Monitor
+} from "lucide-react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-bg.jpg";
-import missionImage from "@/assets/mission-vision.jpg";
+import cloudImage from "@/assets/hero-bg.jpg";
 
-const AppliedAI = () => {
+const CloudInfra = () => {
   const capabilities = [
     {
-      icon: Brain,
-      title: "Machine Learning Models",
-      description: "Custom ML algorithms for prediction, classification, and pattern recognition",
-      technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost"]
+      icon: Cloud,
+      title: "Cloud Setup & Migration",
+      description: "Streamline your journey to the cloud with expert deployment across AWS, Azure, and Google Cloud Platform.",
+      technologies: ["AWS", "Azure", "Google Cloud", "Cloud Architecture"]
     },
     {
-      icon: Code,
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, chatbots, and language understanding",
-      technologies: ["BERT", "GPT", "Transformers", "spaCy"]
+      icon: Server,
+      title: "On-Prem to Cloud Migration",
+      description: "Secure and scalable transition from on-premises infrastructure to the cloud with minimal disruption.",
+      technologies: ["Migration Strategy", "Data Transfer", "Application Migration", "Testing & Validation"]
     },
     {
-      icon: Target,
-      title: "Computer Vision",
-      description: "Image and video analysis, object detection, and visual recognition systems",
-      technologies: ["OpenCV", "YOLO", "ResNet", "CNN"]
+      icon: Database,
+      title: "Application Hosting",
+      description: "High-performance hosting for web and mobile applications with secure server configurations.",
+      technologies: ["Web Hosting", "Mobile Apps", "Server Management", "Performance Optimization"]
     },
     {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "Forecasting models for business intelligence and decision support",
-      technologies: ["Time Series", "Regression", "Neural Networks", "Ensemble Methods"]
+      icon: Mail,
+      title: "Email Hosting",
+      description: "Reliable, secure, and scalable email hosting solutions with advanced spam and threat protection.",
+      technologies: ["Microsoft Exchange", "Google Workspace", "Zoho", "Custom Domains"]
+    },
+    {
+      icon: FileText,
+      title: "Office 365 Services",
+      description: "Complete setup, configuration, and management of Microsoft Office 365 applications and services.",
+      technologies: ["Teams", "OneDrive", "SharePoint", "Licensing Management"]
     },
     {
       icon: Shield,
-      title: "Deep Learning",
-      description: "Complex neural networks for advanced pattern recognition and decision making",
-      technologies: ["Deep Neural Networks", "CNNs", "RNNs", "GANs"]
-    },
-    {
-      icon: Clock,
-      title: "Real-time AI",
-      description: "Low-latency AI systems for real-time processing and decision making",
-      technologies: ["Edge Computing", "Model Optimization", "Streaming", "APIs"]
+      title: "Infrastructure Security",
+      description: "Comprehensive security measures to protect your cloud infrastructure and data assets.",
+      technologies: ["Security Architecture", "Access Control", "Monitoring", "Compliance"]
     }
   ];
 
   const whyChoose = [
     {
-      title: "Custom Solutions",
-      description: "Tailored AI models designed specifically for your unique business requirements and data"
+      title: "Multi-Platform Expertise",
+      description: "Deep knowledge of AWS, Azure, GCP, and Microsoft ecosystems for optimal solution selection"
     },
     {
-      title: "Cutting-edge Technology",
-      description: "Latest AI frameworks and techniques ensuring state-of-the-art performance"
+      title: "Tailored Solutions",
+      description: "Customized strategies that align with your specific business goals and technical requirements"
     },
     {
-      title: "Enterprise Security",
-      description: "Built-in security measures, data privacy protection, and compliance standards"
+      title: "Security First",
+      description: "Robust security measures and compliance standards to protect your data and infrastructure"
+    },
+    {
+      title: "24/7 Support",
+      description: "Dedicated support and monitoring to ensure your systems run smoothly and efficiently"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Strategic cost management to maximize ROI while maintaining performance and reliability"
     },
     {
       title: "Scalable Architecture",
-      description: "Cloud-native design that scales with your business growth and data volume"
-    },
-    {
-      title: "Rigorous Testing",
-      description: "Comprehensive testing methodology ensuring reliability and accuracy"
-    },
-    {
-      title: "Fast Deployment",
-      description: "Streamlined deployment process with minimal disruption to existing systems"
+      description: "Future-proof solutions that grow with your business and adapt to changing demands"
     }
   ];
 
   const methodology = [
     {
       step: "01",
-      title: "Requirements Analysis",
+      title: "Assessment & Planning",
       duration: "2-3 weeks",
-      description: "Deep dive into your specific needs, data, and technical requirements",
-      items: ["Use case definition", "Data assessment", "Technical architecture", "Performance requirements"]
+      description: "Comprehensive evaluation of your current infrastructure and development of migration strategy",
+      items: ["Infrastructure audit", "Requirements analysis", "Migration planning", "Risk assessment"]
     },
     {
       step: "02",
-      title: "Model Design & Prototyping",
-      duration: "4-6 weeks",
-      description: "Design AI models and create proof-of-concept prototypes",
-      items: ["Algorithm selection", "Model architecture", "Prototype development", "Feasibility validation"]
+      title: "Architecture Design",
+      duration: "2-3 weeks",
+      description: "Design scalable and secure cloud architecture tailored to your business needs",
+      items: ["Architecture design", "Security planning", "Scalability planning", "Technology selection"]
     },
     {
       step: "03",
-      title: "Development & Training",
-      duration: "8-12 weeks",
-      description: "Full-scale development with iterative training and optimization",
-      items: ["Model implementation", "Training pipeline", "Hyperparameter tuning", "Performance optimization"]
+      title: "Migration & Setup",
+      duration: "4-8 weeks",
+      description: "Execute migration with minimal downtime and establish new cloud infrastructure",
+      items: ["Data migration", "Application deployment", "Configuration setup", "Testing & validation"]
     },
     {
       step: "04",
-      title: "Testing & Deployment",
-      duration: "3-4 weeks",
-      description: "Comprehensive testing, integration, and production deployment",
-      items: ["Quality assurance", "Integration testing", "Production deployment", "Monitoring setup"]
+      title: "Optimization",
+      duration: "2-3 weeks",
+      description: "Fine-tune performance, security, and costs for optimal operation",
+      items: ["Performance tuning", "Security hardening", "Cost optimization", "Monitoring setup"]
     },
     {
       step: "05",
-      title: "Optimization & Support",
+      title: "Ongoing Management",
       duration: "Ongoing",
-      description: "Ongoing monitoring, optimization, and maintenance support",
-      items: ["Performance monitoring", "Model retraining", "Feature enhancements", "Technical support"]
+      description: "Continuous monitoring, maintenance, and optimization of your cloud infrastructure",
+      items: ["24/7 monitoring", "Regular maintenance", "Performance optimization", "Support & updates"]
     }
   ];
 
   const caseStudies = [
     {
-      industry: "E-commerce",
-      company: "ShopSmart Retail",
-      challenge: "Improving product recommendations and inventory management",
-      solution: "Developed personalized recommendation engine and demand forecasting system",
-      technologies: ["Collaborative Filtering", "Deep Learning", "Time Series Analysis", "Real-time Processing"],
-      quote: "The custom AI solution transformed our entire business model. Sales have never been higher and our customers love the personalized experience.",
+      industry: "Healthcare",
+      company: "MedCloud Systems",
+      challenge: "Migrating legacy healthcare systems to cloud while maintaining HIPAA compliance and data security",
+      solution: "Implemented secure cloud infrastructure with automated backup, disaster recovery, and compliance monitoring",
+      technologies: ["AWS Healthcare", "HIPAA Compliance", "Data Encryption", "Backup Systems"],
+      quote: "The cloud migration has transformed our operations. We now have better security, improved performance, and significant cost savings while maintaining full compliance.",
       metrics: [
-        { label: "Sales conversion increase", value: "45%" },
-        { label: "Inventory cost reduction", value: "30%" },
-        { label: "Recommendation accuracy", value: "85%" },
-        { label: "Customer engagement", value: "2.3x" }
+        { label: "Cost reduction", value: "40%" },
+        { label: "System uptime", value: "99.9%" },
+        { label: "Data recovery time", value: "95% faster" },
+        { label: "Compliance score", value: "100%" }
       ],
       stats: {
         developmentTime: "16 weeks",
-        roi: "320% in first year",
-        accuracy: "91.5%",
-        performance: "<100ms response time"
+        roi: "300% cost savings",
+        accuracy: "99.9% uptime",
+        performance: "<2s response time"
       }
     },
     {
-      industry: "Healthcare",
-      company: "DiagnosticAI Labs",
-      challenge: "Automating medical image analysis for faster, more accurate diagnoses",
-      solution: "Built computer vision system for X-ray and MRI analysis with diagnostic assistance",
-      technologies: ["Convolutional Neural Networks", "Transfer Learning", "Image Segmentation", "DICOM Processing"],
-      quote: "This AI system has revolutionized our diagnostic workflow. We can now process more cases with higher accuracy than ever before.",
+      industry: "E-commerce",
+      company: "ShopCloud Retail",
+      challenge: "Scaling e-commerce platform to handle seasonal traffic spikes and global expansion",
+      solution: "Built auto-scaling cloud infrastructure with global CDN and load balancing for seamless performance",
+      technologies: ["Auto-scaling", "Global CDN", "Load Balancing", "Performance Monitoring"],
+      quote: "Our cloud infrastructure now handles 10x more traffic during peak seasons without any performance issues. The auto-scaling feature is a game-changer.",
       metrics: [
-        { label: "Diagnostic accuracy", value: "92%" },
-        { label: "Faster analysis time", value: "75%" },
-        { label: "FDA compliance", value: "Achieved" },
-        { label: "Hospital integrations", value: "5 systems" }
+        { label: "Traffic handling", value: "10x increase" },
+        { label: "Page load speed", value: "60% faster" },
+        { label: "Global reach", value: "50+ countries" },
+        { label: "Customer satisfaction", value: "4.8/5" }
       ],
       stats: {
         developmentTime: "20 weeks",
-        roi: "250% cost savings",
-        accuracy: "94.2%",
-        performance: "3 seconds per scan"
+        roi: "450% revenue growth",
+        accuracy: "99.95% uptime",
+        performance: "Global <3s load time"
       }
     },
     {
       industry: "Financial Services",
-      company: "InvestPro Analytics",
-      challenge: "Creating intelligent trading algorithms and risk assessment models",
-      solution: "Developed ML-powered trading system with real-time risk analysis and portfolio optimization",
-      technologies: ["Reinforcement Learning", "Time Series Forecasting", "Risk Modeling", "High-Frequency Trading"],
-      quote: "The AI trading system consistently outperforms traditional methods and has become central to our investment strategy.",
+      company: "FinanceCloud Bank",
+      challenge: "Building secure, compliant cloud infrastructure for financial services with real-time transaction processing",
+      solution: "Deployed enterprise-grade cloud infrastructure with advanced security, compliance, and real-time processing capabilities",
+      technologies: ["Financial Cloud", "Real-time Processing", "Security Compliance", "Data Analytics"],
+      quote: "The cloud infrastructure has enabled us to process transactions faster while maintaining the highest security standards. Our customers love the improved experience.",
       metrics: [
-        { label: "Trading performance improvement", value: "28%" },
-        { label: "Risk exposure reduction", value: "65%" },
-        { label: "Portfolio managed", value: "$50M" },
-        { label: "System uptime", value: "99.9%" }
+        { label: "Transaction speed", value: "300% faster" },
+        { label: "Security compliance", value: "100%" },
+        { label: "System reliability", value: "99.99%" },
+        { label: "Customer onboarding", value: "80% faster" }
       ],
       stats: {
         developmentTime: "24 weeks",
-        roi: "480% performance improvement",
-        accuracy: "89.3% prediction rate",
-        performance: "<5ms execution time"
+        roi: "400% efficiency gain",
+        accuracy: "99.99% reliability",
+        performance: "Real-time processing"
       }
     }
   ];
@@ -179,13 +195,13 @@ const AppliedAI = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${missionImage})`,
+            backgroundImage: `url(${cloudImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -193,53 +209,53 @@ const AppliedAI = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/70"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
-              Applied AI Services
+              Cloud & Infrastructure Services
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Applied AI Services
-              <span className="block text-orange-300">Intelligent Solutions for Your Business</span>
+              Harness the Power of{" "}
+              <span className="block text-orange-300">Cloud Technology</span>
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
-              Build bespoke AI solutions designed specifically for your business needs. From machine learning models to advanced neural networks, we create high-performance AI systems that deliver measurable results.
+              We empower businesses to seamlessly transition to the cloud, ensuring minimal disruption and maximum efficiency. Our comprehensive cloud and infrastructure services are designed to optimize performance, enhance security, and scale with your business needs.
             </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-            <Button variant="hero" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
-              <Link to="/contact">
-                Start Your AI Project
-                <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
-            </Button>
-            <Button variant="outline-white" size="xl" asChild>
-              <Link to="/case-studies">
-                View Technical Portfolio
-              </Link>
-            </Button>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mt-12">
-            {["Machine Learning", "Deep Learning", "Computer Vision", "NLP", "Predictive Analytics"].map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-white/10 text-white border-white/20 px-4 py-2">
-                {tech}
-              </Badge>
-            ))}
-          </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
+              <Button variant="hero" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+                <Link to="/contact">
+                  Get Free Consultation
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
+              <Button variant="outline-white" size="xl" asChild>
+                <Link to="/case-studies">
+                  View Case Studies
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
+              {["Cloud Migration", "Infrastructure Management", "Email Hosting", "Office 365", "Security"].map((tech) => (
+                <Badge key={tech} variant="secondary" className="bg-white/10 text-white border-white/20 px-4 py-2">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AI Development Capabilities */}
+      {/* Cloud Infrastructure Capabilities */}
       <section className="py-20 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              AI Development <span className="text-primary">Capabilities</span>
+              Cloud Infrastructure <span className="text-primary">Capabilities</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive AI development services covering the full spectrum of artificial intelligence technologies and applications.
+              Comprehensive cloud and infrastructure services covering the full spectrum of modern cloud technologies and solutions.
             </p>
           </div>
 
@@ -270,15 +286,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Why Choose Our AI Development */}
+      {/* Why Choose Our Cloud Infrastructure */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Why Choose Our <span className="text-primary">AI Development</span>
+              Why Choose Our <span className="text-primary">Cloud Infrastructure</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Industry-leading expertise combined with cutting-edge technology to deliver AI solutions that exceed expectations.
+              Industry-leading expertise combined with cutting-edge cloud technologies to deliver infrastructure solutions that drive business success.
             </p>
           </div>
 
@@ -300,15 +316,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Development Methodology */}
+      {/* Infrastructure Methodology */}
       <section className="py-20 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Development <span className="text-primary">Methodology</span>
+              Infrastructure <span className="text-primary">Methodology</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our proven development process ensures high-quality AI solutions delivered on time and within budget.
+              Our proven methodology ensures successful cloud migration and infrastructure optimization with minimal disruption.
             </p>
           </div>
 
@@ -351,15 +367,15 @@ const AppliedAI = () => {
         </div>
       </section>
 
-      {/* Technical Case Studies */}
+      {/* Infrastructure Case Studies */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Technical <span className="text-primary">Case Studies</span>
+              Infrastructure <span className="text-primary">Case Studies</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Real-world AI development projects showcasing our technical expertise and innovative solutions across industries.
+              Real-world cloud infrastructure projects showcasing our expertise and successful transformations across industries.
             </p>
           </div>
 
@@ -414,13 +430,13 @@ const AppliedAI = () => {
                       
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <span className="font-medium">Development Time:</span> {study.stats.developmentTime}
+                          <span className="font-medium">Implementation Time:</span> {study.stats.developmentTime}
                         </div>
                         <div>
                           <span className="font-medium">ROI:</span> {study.stats.roi}
                         </div>
                         <div>
-                          <span className="font-medium">Accuracy:</span> {study.stats.accuracy}
+                          <span className="font-medium">Reliability:</span> {study.stats.accuracy}
                         </div>
                         <div>
                           <span className="font-medium">Performance:</span> {study.stats.performance}
@@ -439,15 +455,15 @@ const AppliedAI = () => {
       <section className="py-20 bg-gradient-hero">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Infrastructure?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of companies that have accelerated their growth with our AI-powered solutions. Let's discuss how we can help you achieve your digital transformation goals.
+            Join hundreds of companies that have enhanced their infrastructure with our cloud solutions. Let's discuss how we can help you achieve your digital transformation goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
-                Start Your Project
+                Start Your Migration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -468,4 +484,4 @@ const AppliedAI = () => {
   );
 };
 
-export default AppliedAI;
+export default CloudInfra;
