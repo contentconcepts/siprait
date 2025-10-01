@@ -22,24 +22,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 15% 15%;
 
-    /* Primary Brand Colors - Tech Blue */
-    --primary: 224 76% 48%;
+    /* Primary Brand Colors - SipraHub Red */
+    --primary: 359 72% 47%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 76% 58%;
-    --primary-dark: 224 76% 38%;
+    --primary-light: 359 72% 57%;
+    --primary-dark: 359 72% 37%;
 
     /* Secondary - Professional Gray */
     --secondary: 220 13% 95%;
-    --secondary-foreground: 222 15% 25%;
+    --secondary-foreground: 0 0% 36%;
 
     /* Muted Elements */
     --muted: 220 13% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted-foreground: 0 0% 46%;
 
-    /* Accent - Cyber Purple */
-    --accent: 259 83% 61%;
+    /* Accent - Dark Gray */
+    --accent: 0 0% 36%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 259 83% 71%;
+    --accent-light: 0 0% 46%;
 
     /* Success - AI Green */
     --success: 142 76% 36%;
@@ -58,15 +58,15 @@
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(224 76% 48%) 0%, hsl(259 83% 61%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(224 76% 48%) 0%, hsl(259 83% 61%) 50%, hsl(224 76% 58%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(359 72% 47%) 0%, hsl(0 0% 36%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(359 72% 47%) 0%, hsl(0 0% 36%) 50%, hsl(359 72% 57%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(220 13% 99%) 0%, hsl(220 13% 96%) 100%);
 
     /* Shadows */
-    --shadow-card: 0 4px 24px -4px hsl(224 76% 48% / 0.08);
-    --shadow-hero: 0 25px 50px -12px hsl(224 76% 48% / 0.25);
-    --shadow-glow: 0 0 32px hsl(224 76% 48% / 0.3);
+    --shadow-card: 0 4px 24px -4px hsl(359 72% 47% / 0.08);
+    --shadow-hero: 0 25px 50px -12px hsl(359 72% 47% / 0.25);
+    --shadow-glow: 0 0 32px hsl(359 72% 47% / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

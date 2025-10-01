@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Linkedin, Twitter, Github } from "lucide-react";
+import logo from "@/assets/siprahub-logo.jpg";
 
 const Footer = () => {
   const services = [
@@ -24,11 +25,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">SH</span>
-              </div>
-              <span className="text-xl font-bold">SipraHub</span>
+            <div className="mb-4">
+              <img src={logo} alt="SipraHub" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               Your trusted partner for AI-driven digital transformation, 
