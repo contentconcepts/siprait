@@ -29,7 +29,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="SipraHub" className="h-10" />
+            <img src={logo} alt="SipraHub" className="h-16" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,10 +65,6 @@ const Navigation = () => {
                     <Link to="/resources" className={`text-sm font-medium transition-smooth ${isActive("/resources") ? "text-primary" : "text-foreground hover:text-primary"}`}>
                       Resources
                     </Link>
-            
-            <Button variant="hero" size="lg" asChild className="text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg">
-              <Link to="/contact">Get Free Consultation</Link>
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -104,12 +100,6 @@ const Navigation = () => {
             <Link to="/resources" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
               Resources
             </Link>
-            
-            <Button variant="hero" size="lg" className="w-full text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg" asChild>
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                Get Free Consultation
-              </Link>
-            </Button>
           </div>}
       </div>
     </nav>;
