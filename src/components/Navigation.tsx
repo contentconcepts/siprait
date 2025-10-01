@@ -26,7 +26,7 @@ const Navigation = () => {
   }];
   return <nav className="bg-white/95 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img src={logo} alt="SipraHub" className="h-32" />
