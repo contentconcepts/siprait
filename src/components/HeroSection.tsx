@@ -11,7 +11,7 @@ const HeroSection = () => {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-accent/80"></div>
+        <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
 
       {/* Content */}
