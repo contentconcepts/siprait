@@ -1,70 +1,117 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
-import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-bg.jpg";
-const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0" style={{
-      backgroundImage: `url(${heroImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-      </div>
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { Mockup } from "@/components/ui/mockup"
+import { Glow } from "@/components/ui/glow"
+import { ArrowRight, Play } from "lucide-react"
+import { Link } from "react-router-dom"
+import heroImage from "@/assets/hero-bg.jpg"
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI-Driven Digital
-            <span className="block text-orange-300">
-              Transformation
-            </span>
-            <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 text-white">
-              Domain Expertise, and Scalable Operations
-            </span>
+const HeroSection = () => {
+  return (
+    <section
+      className={cn(
+        "relative bg-background text-foreground",
+        "py-12 px-4 md:py-24 lg:py-32",
+        "overflow-hidden",
+      )}
+    >
+      <div className="relative mx-auto max-w-[1280px] flex flex-col gap-12 lg:gap-24">
+        <div className="relative z-10 flex flex-col items-center gap-6 pt-8 md:pt-16 text-center lg:gap-12">
+          {/* Heading */}
+          <h1
+            className={cn(
+              "inline-block animate-appear",
+              "bg-gradient-to-b from-foreground via-foreground/90 to-muted-foreground",
+              "bg-clip-text text-transparent",
+              "text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl",
+              "leading-[1.1] sm:leading-[1.1]",
+              "drop-shadow-sm dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]",
+            )}
+          >
+            AI-Driven Digital Transformation
           </h1>
-          
-          <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
+
+          {/* Description */}
+          <p
+            className={cn(
+              "max-w-[550px] animate-appear opacity-0 [animation-delay:150ms]",
+              "text-base sm:text-lg md:text-xl",
+              "text-muted-foreground",
+              "font-medium",
+            )}
+          >
             Empowering businesses with innovative solutions, robust processes, and scalable 
             on-prem and offshore delivery models.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="glass" size="xl" className="group" asChild>
-              <Link to="/services">
-                Explore Our Expertise →
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          {/* CTAs */}
+          <div
+            className="relative z-10 flex flex-wrap justify-center gap-4 
+            animate-appear opacity-0 [animation-delay:300ms]"
+          >
+            <Button
+              asChild
+              size="lg"
+              className={cn(
+                "bg-gradient-to-b from-brand to-brand/90 dark:from-brand/90 dark:to-brand/80",
+                "hover:from-brand/95 hover:to-brand/85 dark:hover:from-brand/80 dark:hover:to-brand/70",
+                "text-white shadow-lg",
+                "transition-all duration-300",
+              )}
+            >
+              <Link to="/contact">
+                Explore Our Expertise
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline-white" size="xl" asChild>
-              <Link to="/contact">
-                <Play className="mr-2 h-5 w-5" />
-                Get a Free Consultation →
+
+            <Button
+              asChild
+              size="lg"
+              variant="ghost"
+              className={cn(
+                "text-foreground/80 dark:text-foreground/70",
+                "transition-all duration-300",
+              )}
+            >
+              <Link to="/case-studies">
+                <Play className="mr-2 h-4 w-4" />
+                View Case Studies
               </Link>
             </Button>
           </div>
 
-          {/* Stats */}
-          
+          {/* Mockup */}
+          <div className="relative w-full pt-12 px-4 sm:px-6 lg:px-8">
+            <Mockup
+              className={cn(
+                "animate-appear opacity-0 [animation-delay:700ms]",
+                "shadow-[0_0_50px_-12px_rgba(0,0,0,0.3)] dark:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)]",
+                "border-brand/10 dark:border-brand/5",
+              )}
+            >
+              <img
+                src={heroImage}
+                alt="SipraHub Platform Preview"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </Mockup>
+          </div>
         </div>
       </div>
 
-      {/* Floating particles effect */}
+      {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent-light/50 rounded-full animate-pulse" style={{
-        animationDelay: '1s'
-      }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{
-        animationDelay: '2s'
-      }}></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-accent/60 rounded-full animate-pulse" style={{
-        animationDelay: '0.5s'
-      }}></div>
+        <Glow
+          variant="above"
+          className="animate-appear-zoom opacity-0 [animation-delay:1000ms]"
+        />
       </div>
-    </section>;
-};
-export default HeroSection;
+    </section>
+  )
+}
+
+export default HeroSection
