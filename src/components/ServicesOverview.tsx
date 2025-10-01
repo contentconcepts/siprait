@@ -73,7 +73,7 @@ const ServicesOverview = () => {
             >
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-smooth">
+                  <div className="p-3 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex-1">
@@ -95,10 +95,10 @@ const ServicesOverview = () => {
                   ))}
                 </ul>
 
-                <Button variant="outline" size="lg" asChild className="w-full">
+                <Button variant="outline" size="sm" asChild className="w-fit mx-auto">
                   <Link to={service.link}>
                     Learn More
-                    <ArrowRight className="ml-3 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
@@ -107,7 +107,7 @@ const ServicesOverview = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="xl" asChild className="text-xl font-semibold px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg">
+          <Button variant="hero" size="xl" asChild className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
             <Link to="/services">
               Explore All Services
               <ArrowRight className="ml-3 h-6 w-6" />

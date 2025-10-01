@@ -1,40 +1,65 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import React from "react";
+import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
 
-export interface MockupProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode
-}
+const mockupVariants = cva(
+  "flex relative z-10 overflow-hidden shadow-2xl border border-border/5 border-t-border/15",
+  {
+    variants: {
+      type: {
+        mobile: "rounded-[48px] max-w-[350px]",
+        responsive: "rounded-md",
+      },
+    },
+    defaultVariants: {
+      type: "responsive",
+    },
+  },
+);
+
+export interface MockupProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof mockupVariants> {}
 
 const Mockup = React.forwardRef<HTMLDivElement, MockupProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          "relative rounded-lg border bg-card overflow-hidden",
-          "shadow-lg transition-shadow duration-300",
-          className
-        )}
-        {...props}
-      >
-        {/* Browser chrome mockup */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-            <div className="w-3 h-3 rounded-full bg-green-500/80" />
-          </div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative">
-          {children}
-        </div>
-      </div>
-    )
-  }
-)
+  ({ className, type, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(mockupVariants({ type, className }))}
+      {...props}
+    />
+  ),
+);
+Mockup.displayName = "Mockup";
 
-Mockup.displayName = "Mockup"
+const frameVariants = cva(
+  "bg-accent/5 flex relative z-10 overflow-hidden rounded-2xl",
+  {
+    variants: {
+      size: {
+        small: "p-2",
+        large: "p-4",
+      },
+    },
+    defaultVariants: {
+      size: "small",
+    },
+  },
+);
 
-export { Mockup }
+export interface MockupFrameProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof frameVariants> {}
+
+const MockupFrame = React.forwardRef<HTMLDivElement, MockupFrameProps>(
+  ({ className, size, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(frameVariants({ size, className }))}
+      {...props}
+    />
+  ),
+);
+MockupFrame.displayName = "MockupFrame";
+
+export { Mockup, MockupFrame };

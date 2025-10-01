@@ -1,13 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Target, Eye, Heart, CheckCircle, Star, Award } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Quote, Target, Eye, Heart, CheckCircle, Star, Award, ArrowRight, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import missionVision from "@/assets/mission-vision.jpg";
 import prasannaHeadshot from "/lovable-uploads/6e0bce80-e062-44ce-aae6-b11c691642e9.png";
 import senthilHeadshot from "/lovable-uploads/d5656f33-44b5-47fc-b32b-ae0db542c2ae.png";
-import parthasarathyHeadshot from "@/assets/parthasarathy-headshot.jpg";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -15,19 +17,15 @@ const AboutUs = () => {
       name: "Prasanna Kumar",
       role: "CEO",
       description: "With extensive experience in setting up digital businesses and running cybersecurity operations, Prasanna provides strategic leadership and a deep understanding of business execution.",
-      image: prasannaHeadshot
+      image: prasannaHeadshot,
+      linkedin: "https://www.linkedin.com/in/prasannakumarpn/"
     },
     {
       name: "Senthil Natarajan",
       role: "Industry Advisor",
       description: "Senthil has worked with Fortune 500 companies worldwide, leading digital transformation initiatives and creating custom AI-powered solutions.",
-      image: senthilHeadshot
-    },
-    {
-      name: "Parthasarathy Ganesan",
-      role: "Tech Advisor",
-      description: "Parthasarathy brings invaluable insights into business process design and implementation, ensuring our solutions are not only technically sound but also seamlessly integrated into your workflows.",
-      image: parthasarathyHeadshot
+      image: senthilHeadshot,
+      linkedin: "https://www.linkedin.com/in/hisenthil/"
     }
   ];
 
@@ -54,22 +52,41 @@ const AboutUs = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={aboutHero} 
-            alt="About SipraHub team collaboration" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-hero"></div>
+      <section className="relative text-white py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${aboutHero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/70"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-accent-bright">SipraHub</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            SipraHub - AI-Driven Digital Transformation & IT Services
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
+              About SipraHub
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+              About <span className="text-orange-300">SipraHub</span>
+            </h1>
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
+              AI-Driven Digital Transformation & IT Services. We build secure, intelligent, and scalable software solutions that drive growth and operational excellence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+                <Link to="/contact">
+                  Get in Touch
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
+              <Button variant="outline-white" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40">
+                Our Services
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -150,7 +167,7 @@ const AboutUs = () => {
             {values.map((value, index) => (
               <Card key={index} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group text-center">
                 <CardContent className="p-8">
-                  <div className="inline-flex p-4 rounded-full bg-primary/10 mb-6 group-hover:bg-primary/20 transition-smooth">
+                  <div className="inline-flex p-4 rounded-full bg-muted mb-6 group-hover:scale-110 transition-bounce">
                     <value.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -174,11 +191,11 @@ const AboutUs = () => {
               Meet Our <span className="text-primary">Leadership Team</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our strength lies in the complementary expertise of our three founders
+              Our strength lies in the complementary expertise of our leadership team
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={index} className="bg-white border-0 shadow-card hover:shadow-hero transition-smooth group">
                 <CardContent className="p-8 text-center">
@@ -195,9 +212,18 @@ const AboutUs = () => {
                   <p className="text-primary font-medium mb-4">
                     {member.role}
                   </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     {member.description}
                   </p>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                    <span className="text-sm font-medium">LinkedIn</span>
+                  </a>
                 </CardContent>
               </Card>
             ))}

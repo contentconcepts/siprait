@@ -154,13 +154,13 @@ const BlogResources = () => {
               and practical resources for your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
                 <Link to="/contact">
                   Subscribe to Newsletter
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/60 text-white hover:bg-white hover:text-gray-900 shadow-lg bg-white/10" asChild>
+              <Button variant="outline" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/60 text-white hover:text-white/80 shadow-lg" asChild>
                 <Link to="/case-studies">
                   Download Resources
                 </Link>
@@ -213,7 +213,7 @@ const BlogResources = () => {
                     </div>
                   </div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <div className="p-2 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
                       <post.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div className="text-xs text-muted-foreground flex items-center">
@@ -343,7 +343,7 @@ const BlogResources = () => {
               placeholder="Enter your email" 
               className="flex-1 px-4 py-3 rounded-lg text-foreground placeholder:text-muted-foreground border-0"
             />
-            <Button size="xl" variant="glass" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm">
+            <Button size="xl" variant="glass" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm">
               Subscribe
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>

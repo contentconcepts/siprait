@@ -197,33 +197,32 @@ const CloudInfra = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative text-white py-20 overflow-hidden">
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${cloudImage})`,
+            backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-hero"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-accent/70"></div>
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/40 font-semibold">
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
               Cloud & Infrastructure Services
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               Harness the Power of{" "}
-              <span className="block text-orange-300">Cloud Technology</span>
+              <span className="text-orange-300">Cloud Technology</span>
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto font-medium">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
               We empower businesses to seamlessly transition to the cloud, ensuring minimal disruption and maximum efficiency. Our comprehensive cloud and infrastructure services are designed to optimize performance, enhance security, and scale with your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="hero" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
                 <Link to="/contact">
                   Get Free Consultation
                   <ArrowRight className="ml-3 h-6 w-6" />
@@ -263,7 +262,7 @@ const CloudInfra = () => {
             {capabilities.map((capability, index) => (
               <Card key={index} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group">
                 <CardContent className="p-8">
-                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-smooth w-fit mb-6">
+                  <div className="p-3 rounded-lg bg-muted group-hover:scale-110 transition-bounce w-fit mb-6">
                     <capability.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-smooth">

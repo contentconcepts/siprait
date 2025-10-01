@@ -14,6 +14,7 @@ import Resources from "./pages/Resources";
 import Cybersecurity from "./pages/services/Cybersecurity";
 import AppliedAI from "./pages/services/AppliedAI";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
+import SoftwareDeliveryModels from "./pages/services/SoftwareDeliveryModels";
 import AIConsulting from "./pages/services/AIConsulting";
 import CloudInfra from "./pages/services/CloudInfra";
 import NotFound from "./pages/NotFound";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/services/cybersecurity" element={<Cybersecurity />} />
           <Route path="/services/applied-ai-services" element={<AppliedAI />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
+          <Route path="/services/software-delivery-models" element={<SoftwareDeliveryModels />} />
           <Route path="/services/ai-consulting" element={<AIConsulting />} />
           <Route path="/services/cloud-infra" element={<CloudInfra />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

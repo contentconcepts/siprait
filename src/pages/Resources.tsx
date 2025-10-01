@@ -216,7 +216,7 @@ const Resources = () => {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
+            <Badge variant="secondary" className="mb-6 text-white border-white/40 font-semibold">
               Resources
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
@@ -227,7 +227,7 @@ const Resources = () => {
               Access our comprehensive library of guides, frameworks, templates, and case studies to accelerate your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
                 <Link to="/contact">
                   Get Custom Consultation
                   <ArrowRight className="ml-3 h-6 w-6" />
@@ -307,7 +307,7 @@ const Resources = () => {
                       </div>
                     </div>
                     
-                    <Button size="lg" className="text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg mt-auto" asChild>
+                    <Button size="lg" className="text-lg font-semibold px-6 py-3 text-primary hover:text-primary/80 shadow-lg mt-auto border border-primary/20" asChild>
                       <Link to={`/resources/${resource.title.toLowerCase().replace(/\s+/g, '-')}`}>
                         <Download className="mr-2 h-5 w-5" />
                         Download Now
@@ -346,7 +346,7 @@ const Resources = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30"></div>
                   <div className="absolute bottom-4 left-4">
-                    <div className="p-3 rounded-lg bg-white/20 backdrop-blur-sm">
+                    <div className="p-3 rounded-lg bg-muted backdrop-blur-sm">
                       <category.icon className={`h-6 w-6 ${category.color}`} />
                     </div>
                   </div>
@@ -421,7 +421,7 @@ const Resources = () => {
                         </div>
                       </div>
                     </div>
-                    <Button size="lg" className="text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg" asChild>
+                    <Button size="lg" className="text-lg font-semibold px-6 py-3 text-primary hover:text-primary/80 shadow-lg border border-primary/20" asChild>
                       <Link to={`/webinar/${webinar.title.toLowerCase().replace(/\s+/g, '-')}`}>
                         Register Now
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -528,7 +528,7 @@ const Resources = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
-            <Button size="xl" className="text-xl font-semibold px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg">
+            <Button size="xl" className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
               Subscribe
             </Button>
           </div>

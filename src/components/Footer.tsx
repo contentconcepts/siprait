@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Linkedin, Twitter, Github } from "lucide-react";
 import logo from "@/assets/siprahub-logo.jpg";
 
 const Footer = () => {
@@ -33,13 +33,13 @@ const Footer = () => {
               delivering innovative solutions that drive measurable business growth.
             </p>
             <div className="flex space-x-4">
-              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
                 <Twitter className="h-5 w-5" />
               </Button>
-              <Button variant="glass" size="icon" className="w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg">
+              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
                 <Github className="h-5 w-5" />
               </Button>
             </div>
@@ -85,14 +85,10 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-white/60" />
-                <span className="text-white/80 text-sm">info@siprahub.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-white/60" />
-                <span className="text-white/80 text-sm">+1-800-SIPRAHUB</span>
+                <span className="text-white/80 text-sm">contact@siprahub.com</span>
               </div>
             </div>
-            <Button variant="glass" size="lg" className="mt-6 w-full text-lg font-semibold px-6 py-3 bg-white/20 hover:bg-white/30 border border-white/30 shadow-lg" asChild>
+            <Button variant="glass" size="lg" className="mt-6 w-full text-lg font-semibold px-6 py-3 border border-white/30 shadow-lg" asChild>
               <Link to="/contact">Get Free Consultation</Link>
             </Button>
           </div>

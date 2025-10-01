@@ -8,7 +8,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   :root {
     /* Core Background & Text */
     --background: 0 0% 99%;
@@ -56,7 +56,7 @@
 
     /* Design Tokens */
     --radius: 0.75rem;
-    --brand: 217 91% 60%;
+    --brand: 27 96% 61%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(359 65% 45%) 0%, hsl(0 0% 36%) 100%);
@@ -88,6 +88,8 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --brand-foreground: 31 97% 72%;
   }
 
   .dark {
@@ -126,6 +128,11 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --brand: 31 97% 72%;
+  }
+  .theme {
+    --animate-appear-zoom: appear-zoom 0.5s ease-out forwards;
+    --animate-appear: appear 0.5s ease-out forwards;
   }
 }
 
@@ -168,6 +175,51 @@
     animation: appear-zoom 0.8s ease-out forwards;
   }
 
+  /* Animations for new Hero */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Vertical word scroll animation for hero changing words */
+  @keyframes scroll-words-up {
+    0% { transform: translateY(0%); }
+    30% { transform: translateY(0%); }
+    33.333% { transform: translateY(-100%); }
+    63.333% { transform: translateY(-100%); }
+    66.666% { transform: translateY(-200%); }
+    96.666% { transform: translateY(-200%); }
+    100% { transform: translateY(0%); }
+  }
+
+  .animate-scroll-words {
+    animation: scroll-words-up 6s ease-in-out infinite;
+  }
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 1s ease-out forwards;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
@@ -191,6 +243,11 @@
 
   .bg-gradient-hero {
     background: var(--gradient-hero);
+  }
+
+  /* Light hero gradient for AI illustrations */
+  .bg-gradient-hero-light {
+    background: radial-gradient(1200px 600px at 50% 0%, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 60%, hsl(220 13% 96%) 100%);
   }
 
   .bg-gradient-card {
@@ -228,5 +285,124 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer utilities {
+  .delay-100 { animation-delay: 100ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-1000 { animation-delay: 1000ms; }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes appear-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    }
+  }
+  @keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes appear-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    }
+  }
+  @keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  @keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
   }
 }

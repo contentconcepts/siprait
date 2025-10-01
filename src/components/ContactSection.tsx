@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, ArrowRight, Send } from "lucide-react";
+import { Mail, ArrowRight, Send } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -22,13 +22,13 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Form */}
-          <Card className="bg-gradient-card border-0 shadow-card">
+          <Card className="bg-gradient-card border-0 shadow-card" id="contact-form">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold text-foreground mb-6">
                 Get Free Consultation
               </h3>
               
-              <form className="space-y-6">
+              <form action="mailto:contact@siprahub.com" method="post" encType="text/plain" className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
@@ -87,7 +87,7 @@ const ContactSection = () => {
                   </Select>
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full text-lg font-semibold px-6 py-4 bg-primary hover:bg-primary/90 shadow-lg">
+                <Button variant="hero" size="lg" className="w-full text-lg font-semibold px-6 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
                   <Send className="mr-3 h-6 w-6" />
                   Send Message
                 </Button>
@@ -115,19 +115,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
-                    <p className="text-muted-foreground">info@siprahub.com</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-card border-0 shadow-card">
-                <CardContent className="p-6 flex items-center space-x-4">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <Phone className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
-                    <p className="text-muted-foreground">+1-800-SIPRAHUB</p>
+                    <p className="text-primary font-medium text-lg">contact@siprahub.com</p>
                   </div>
                 </CardContent>
               </Card>

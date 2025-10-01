@@ -153,7 +153,7 @@ const Blog = () => {
               and practical knowledge for your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
                 <Link to="/contact">
                   Subscribe to Newsletter
                   <ArrowRight className="ml-3 h-6 w-6" />
@@ -220,7 +220,7 @@ const Blog = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button size="lg" className="text-lg font-semibold px-6 py-3 bg-primary hover:bg-primary/90 shadow-lg" asChild>
+                  <Button size="lg" className="text-lg font-semibold px-6 py-3 text-primary hover:text-primary/80 shadow-lg border border-primary/20" asChild>
                     <Link to="/blog/ai-trends-2025">
                       Read Full Article
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -324,7 +324,7 @@ const Blog = () => {
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-smooth">
+                          <div className="p-3 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
                             <category.icon className="h-6 w-6 text-primary" />
                           </div>
                           <div>
@@ -394,7 +394,7 @@ const Blog = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
-            <Button size="xl" className="text-xl font-semibold px-8 py-4 bg-primary hover:bg-primary/90 shadow-lg">
+            <Button size="xl" className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
               Subscribe
             </Button>
           </div>

@@ -18,9 +18,9 @@ import {
 const KeyFeaturesSection = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI Consulting Services",
-      description: "Unlock strategic growth with tailored AI strategies and analytics.",
+      icon: Building,
+      title: "Flexible Delivery Models",
+      description: "On‑premise, offshore ODCs, or managed delivery — tailored to your needs.",
       color: "text-accent"
     },
     {

@@ -182,7 +182,7 @@ const CaseStudies = () => {
               industries and technologies. See the impact of our AI-powered innovations.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 bg-white/20 hover:bg-white/30 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
+              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
                 <Link to="/contact">
                   Start Your Project
                   <ArrowRight className="ml-3 h-6 w-6" />
@@ -240,7 +240,7 @@ const CaseStudies = () => {
                     </Badge>
                   </div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <div className="p-2 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
                       <study.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
@@ -344,7 +344,7 @@ const CaseStudies = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="xl" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+            <Button size="xl" variant="outline" className="border-white/30 text-white hover:text-white/80" asChild>
               <Link to="/contact">
                 Schedule Consultation
               </Link>
