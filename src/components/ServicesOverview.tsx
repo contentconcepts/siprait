@@ -69,7 +69,7 @@ const ServicesOverview = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group"
+              className="bg-gradient-card border border-primary/10 shadow-card hover:shadow-hero hover:border-primary/20 transition-smooth group"
             >
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4 mb-6">

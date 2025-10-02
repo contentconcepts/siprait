@@ -19,8 +19,8 @@ const HeroSection = () => {
       }
       description="Go beyond theory. Our teams bring domain insight and AI expertise together to discover what matters most. With design thinking at the core, we co-create solutions that unlock value and accelerate change."
       actions={[
-        { text: "Contact Us", href: "/contact", variant: "default" },
-        { text: "Explore Services", href: "/resources", variant: "glow" },
+        { text: "Get Free Consultation", href: "/contact", variant: "glass" },
+        { text: "Explore Services", href: "/resources", variant: "outline-white" },
       ]}
       image={{
         light: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",

@@ -76,17 +76,23 @@ export function HeroSection({ badge, title, description, actions, image }: HeroP
             {description}
           </p>
 
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
-            <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
-              {actions.map((action, index) => (
-                <Button key={index} variant={action.variant} size="lg" asChild>
+          <div className="relative z-10 flex animate-appear justify-center gap-6 opacity-0 delay-300">
+            {actions.map((action, index) => {
+              const buttonClasses = action.variant === "glass" 
+                ? "text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm"
+                : action.variant === "outline-white"
+                ? "text-xl font-semibold px-8 py-4 border-2 border-white/40"
+                : "";
+              
+              return (
+                <Button key={index} variant={action.variant} size="xl" className={buttonClasses} asChild>
                   <a href={action.href} className="flex items-center gap-2">
                     {action.icon}
                     {action.text}
                   </a>
                 </Button>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
           {/* Subtle bottom gradient divider to distinguish sections */}

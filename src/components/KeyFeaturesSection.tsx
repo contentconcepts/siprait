@@ -84,7 +84,7 @@ const KeyFeaturesSection = () => {
         <div className="text-center">
           <Button variant="hero" size="lg" className="group" asChild>
             <Link to="/about">
-              Learn More →
+              Learn More
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
