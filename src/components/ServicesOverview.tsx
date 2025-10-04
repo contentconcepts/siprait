@@ -18,14 +18,14 @@ const ServicesOverview = () => {
     },
     {
       icon: Brain,
-      title: "Applied AI Services",
+      title: "AI Services",
       description: "Custom AI development, machine learning models, and intelligent automation solutions.",
       features: [
         "Custom ML Models",
         "Computer Vision & NLP",
         "Real-time AI Systems"
       ],
-      link: "/services/applied-ai-services"
+      link: "/services/ai-services"
     },
     {
       icon: Users,

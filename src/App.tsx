@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import Cybersecurity from "./pages/services/Cybersecurity";
 import AppliedAI from "./pages/services/AppliedAI";
+import AIAdvisoryConsulting from "./pages/services/AIAdvisoryConsulting";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import SoftwareDeliveryModels from "./pages/services/SoftwareDeliveryModels";
 import AIConsulting from "./pages/services/AIConsulting";
@@ -37,7 +38,8 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/resources" element={<Resources />} />
           <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-          <Route path="/services/applied-ai-services" element={<AppliedAI />} />
+          <Route path="/services/ai-services" element={<AppliedAI />} />
+          <Route path="/services/ai-advisory-consulting" element={<AIAdvisoryConsulting />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
           <Route path="/services/software-delivery-models" element={<SoftwareDeliveryModels />} />
           <Route path="/services/ai-consulting" element={<AIConsulting />} />
