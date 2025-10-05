@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Quote, Target, Eye, Heart, CheckCircle, Star, Award, ArrowRight, Linkedin } from "lucide-react";
+import { Quote, Target, Eye, Heart, CheckCircle, Star, ArrowRight, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
@@ -81,9 +81,6 @@ const AboutUs = () => {
                   Get in Touch
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
-              </Button>
-              <Button variant="outline-white" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40">
-                Our Services
               </Button>
             </div>
           </div>
@@ -287,30 +284,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Awards Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center mb-8">
-            <Award className="h-12 w-12 text-primary mr-4" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Awards and Recognition
-            </h2>
-          </div>
-          
-          <div className="max-w-3xl mx-auto">
-            <Card className="bg-gradient-card border-0 shadow-card">
-              <CardContent className="p-8">
-                <p className="text-lg text-muted-foreground mb-4">
-                  • Recognized as a Top Innovator in AI Solutions by [Publication/Organization]
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  • [List any other relevant achievements or certifications]
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

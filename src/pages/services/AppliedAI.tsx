@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Brain, Code, Zap, Shield, Target, Clock, CheckCircle, Search, TrendingUp, BarChart3, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Search, Target, TrendingUp, BarChart3, Lightbulb, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -11,40 +11,40 @@ import missionImage from "@/assets/mission-vision.jpg";
 const AppliedAI = () => {
   const capabilities = [
     {
-      icon: Brain,
-      title: "Machine Learning Models",
-      description: "Custom ML algorithms for prediction, classification, and pattern recognition",
-      technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost"]
-    },
-    {
-      icon: Code,
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, chatbots, and language understanding",
-      technologies: ["BERT", "GPT", "Transformers", "spaCy"]
+      icon: Search,
+      title: "AI Strategy Consultation",
+      description: "Develop a comprehensive AI roadmap tailored to your business needs and objectives.",
+      technologies: ["Business Process Analysis", "Data Assessment", "Competitive Intelligence", "Opportunity Mapping"]
     },
     {
       icon: Target,
-      title: "Computer Vision",
-      description: "Image and video analysis, object detection, and visual recognition systems",
-      technologies: ["OpenCV", "YOLO", "ResNet", "CNN"]
+      title: "AI App Development",
+      description: "Build tailored AI solutions and algorithms designed for your unique challenges.",
+      technologies: ["Strategic Planning", "Implementation Roadmaps", "Resource Planning", "Success Metrics"]
     },
     {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "Forecasting models for business intelligence and decision support",
-      technologies: ["Time Series", "Regression", "Neural Networks", "Ensemble Methods"]
+      icon: TrendingUp,
+      title: "AI Integration Services",
+      description: "Seamlessly integrate AI into existing systems and workflows without disruption.",
+      technologies: ["Cost-Benefit Analysis", "ROI Modeling", "Performance Forecasting", "Value Assessment"]
     },
     {
-      icon: Shield,
-      title: "Deep Learning",
-      description: "Complex neural networks for advanced pattern recognition and decision making",
-      technologies: ["Deep Neural Networks", "CNNs", "RNNs", "GANs"]
+      icon: BarChart3,
+      title: "AI-Powered Automation",
+      description: "Automate repetitive tasks and processes with intelligent AI that learns over time.",
+      technologies: ["Strategic Planning", "Market Analysis", "Technology Selection", "Implementation Planning"]
     },
     {
-      icon: Clock,
-      title: "Real-time AI",
-      description: "Low-latency AI systems for real-time processing and decision making",
-      technologies: ["Edge Computing", "Model Optimization", "Streaming", "APIs"]
+      icon: Lightbulb,
+      title: "Data Analysis & Insights",
+      description: "Extract insights using advanced analytics and visualization tools.",
+      technologies: ["Technology Trends", "Innovation Assessment", "Competitive Analysis", "Future Planning"]
+    },
+    {
+      icon: Users,
+      title: "AI Training & Education",
+      description: "Empower teams through customized training programs and workshops.",
+      technologies: ["Change Strategy", "Training Programs", "Organizational Design", "Culture Transformation"]
     }
   ];
 
@@ -82,11 +82,6 @@ const AppliedAI = () => {
                 <Link to="/contact">
                   Start Your AI Project
                   <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
-              </Button>
-              <Button variant="outline-white" size="xl" asChild>
-                <Link to="/case-studies">
-                  View Technical Portfolio
                 </Link>
               </Button>
             </div>
@@ -143,29 +138,29 @@ const AppliedAI = () => {
 
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of companies that have accelerated their growth with our AI-powered solutions. Let's discuss how we can help you achieve your digital transformation goals.
+            Start your AI transformation with SipraHub today! Get in touch with our experts for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Schedule Consultation
               </Link>
             </Button>
           </div>
           <div className="mt-8 text-white/80">
-            <p>+1 (555) 123-4567 | hello@siprahub.com</p>
+            <p>contact@siprahub.com</p>
           </div>
         </div>
       </section>

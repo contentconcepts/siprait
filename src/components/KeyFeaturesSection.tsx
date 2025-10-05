@@ -19,9 +19,9 @@ const KeyFeaturesSection = () => {
   const features = [
     {
       icon: Building,
-      title: "Flexible Delivery Models",
-      description: "On‑premise, offshore ODCs, or managed delivery — tailored to your needs.",
-      color: "text-accent"
+      title: "Scalable Team Structures",
+      description: "Onshore, nearshore, and offshore delivery models that scale efficiently and balance cost with performance",
+      color: "text-primary"
     },
     {
       icon: Globe,
@@ -33,13 +33,13 @@ const KeyFeaturesSection = () => {
       icon: Settings,
       title: "Technology-Agnostic Solutions",
       description: "Best tools for secure, scalable, and future-proof systems.",
-      color: "text-success"
+      color: "text-primary"
     },
     {
       icon: Zap,
       title: "AI-Driven Digital Transformation",
       description: "Automate processes and enhance customer experiences with AI.",
-      color: "text-accent"
+      color: "text-primary"
     }
   ];
 

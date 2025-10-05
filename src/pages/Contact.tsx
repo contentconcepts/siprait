@@ -37,18 +37,6 @@ const Contact = () => {
             <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
               Start your AI-driven transformation with SipraHub today! Get in touch with our experts for a free consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
-                <Link to="#contact-form">
-                  Get Free Consultation
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
-              </Button>
-              <Button variant="outline-white" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40">
-                <Mail className="mr-3 h-6 w-6" />
-                contact@siprahub.com
-              </Button>
-            </div>
           </div>
         </div>
       </section>

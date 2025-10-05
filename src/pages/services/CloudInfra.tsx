@@ -129,68 +129,6 @@ const CloudInfra = () => {
     }
   ];
 
-  const caseStudies = [
-    {
-      industry: "Healthcare",
-      company: "MedCloud Systems",
-      challenge: "Migrating legacy healthcare systems to cloud while maintaining HIPAA compliance and data security",
-      solution: "Implemented secure cloud infrastructure with automated backup, disaster recovery, and compliance monitoring",
-      technologies: ["AWS Healthcare", "HIPAA Compliance", "Data Encryption", "Backup Systems"],
-      quote: "The cloud migration has transformed our operations. We now have better security, improved performance, and significant cost savings while maintaining full compliance.",
-      metrics: [
-        { label: "Cost reduction", value: "40%" },
-        { label: "System uptime", value: "99.9%" },
-        { label: "Data recovery time", value: "95% faster" },
-        { label: "Compliance score", value: "100%" }
-      ],
-      stats: {
-        developmentTime: "16 weeks",
-        roi: "300% cost savings",
-        accuracy: "99.9% uptime",
-        performance: "<2s response time"
-      }
-    },
-    {
-      industry: "E-commerce",
-      company: "ShopCloud Retail",
-      challenge: "Scaling e-commerce platform to handle seasonal traffic spikes and global expansion",
-      solution: "Built auto-scaling cloud infrastructure with global CDN and load balancing for seamless performance",
-      technologies: ["Auto-scaling", "Global CDN", "Load Balancing", "Performance Monitoring"],
-      quote: "Our cloud infrastructure now handles 10x more traffic during peak seasons without any performance issues. The auto-scaling feature is a game-changer.",
-      metrics: [
-        { label: "Traffic handling", value: "10x increase" },
-        { label: "Page load speed", value: "60% faster" },
-        { label: "Global reach", value: "50+ countries" },
-        { label: "Customer satisfaction", value: "4.8/5" }
-      ],
-      stats: {
-        developmentTime: "20 weeks",
-        roi: "450% revenue growth",
-        accuracy: "99.95% uptime",
-        performance: "Global <3s load time"
-      }
-    },
-    {
-      industry: "Financial Services",
-      company: "FinanceCloud Bank",
-      challenge: "Building secure, compliant cloud infrastructure for financial services with real-time transaction processing",
-      solution: "Deployed enterprise-grade cloud infrastructure with advanced security, compliance, and real-time processing capabilities",
-      technologies: ["Financial Cloud", "Real-time Processing", "Security Compliance", "Data Analytics"],
-      quote: "The cloud infrastructure has enabled us to process transactions faster while maintaining the highest security standards. Our customers love the improved experience.",
-      metrics: [
-        { label: "Transaction speed", value: "300% faster" },
-        { label: "Security compliance", value: "100%" },
-        { label: "System reliability", value: "99.99%" },
-        { label: "Customer onboarding", value: "80% faster" }
-      ],
-      stats: {
-        developmentTime: "24 weeks",
-        roi: "400% efficiency gain",
-        accuracy: "99.99% reliability",
-        performance: "Real-time processing"
-      }
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -366,114 +304,31 @@ const CloudInfra = () => {
         </div>
       </section>
 
-      {/* Infrastructure Case Studies */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Infrastructure <span className="text-primary">Case Studies</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Real-world cloud infrastructure projects showcasing our expertise and successful transformations across industries.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="bg-gradient-card border-0 shadow-card">
-                <CardContent className="p-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                      <Badge variant="outline" className="mb-4">
-                        {study.industry}
-                      </Badge>
-                      <h3 className="text-2xl font-bold text-foreground mb-4">
-                        {study.company}
-                      </h3>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-foreground mb-2">Challenge</h4>
-                        <p className="text-muted-foreground mb-4">{study.challenge}</p>
-                        
-                        <h4 className="font-semibold text-foreground mb-2">Solution</h4>
-                        <p className="text-muted-foreground mb-4">{study.solution}</p>
-                        
-                        <div className="flex flex-wrap gap-2">
-                          {study.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                        "{study.quote}"
-                      </blockquote>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-4">Results & Metrics</h4>
-                      <div className="grid grid-cols-2 gap-4 mb-6">
-                        {study.metrics.map((metric) => (
-                          <div key={metric.label} className="text-center p-4 rounded-lg bg-primary/5">
-                            <div className="text-2xl font-bold text-primary mb-1">
-                              {metric.value}
-                            </div>
-                            <div className="text-sm text-muted-foreground">
-                              {metric.label}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="font-medium">Implementation Time:</span> {study.stats.developmentTime}
-                        </div>
-                        <div>
-                          <span className="font-medium">ROI:</span> {study.stats.roi}
-                        </div>
-                        <div>
-                          <span className="font-medium">Reliability:</span> {study.stats.accuracy}
-                        </div>
-                        <div>
-                          <span className="font-medium">Performance:</span> {study.stats.performance}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Infrastructure?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of companies that have enhanced their infrastructure with our cloud solutions. Let's discuss how we can help you achieve your digital transformation goals.
+            Start your cloud transformation with SipraHub today! Get in touch with our experts for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Start Your Migration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Schedule Consultation
               </Link>
             </Button>
           </div>
           <div className="mt-8 text-white/80">
-            <p>+1 (555) 123-4567 | hello@siprahub.com</p>
+            <p>contact@siprahub.com</p>
           </div>
         </div>
       </section>

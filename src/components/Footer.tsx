@@ -1,47 +1,52 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Twitter, Github } from "lucide-react";
-import logo from "@/assets/siprahub-logo.jpg";
+import { Mail, Linkedin, Twitter, Github, MapPin } from "lucide-react";
+import logo from "@/assets/siprahub-logo.png";
 
 const Footer = () => {
   const services = [
     { name: "Software Development", href: "/services/software-development" },
-    { name: "Applied AI Services", href: "/services/applied-ai-services" },
-    { name: "AI Consulting Services", href: "/services/ai-consulting" },
+    { name: "AI Solutions", href: "/services/ai-services" },
+    { name: "AI Advisory & Consulting", href: "/services/ai-advisory-consulting" },
     { name: "Cybersecurity", href: "/services/cybersecurity" },
     { name: "Cloud & Infrastructure", href: "/services/cloud-infra" },
+    { name: "Adaptive Delivery Solutions", href: "/services/software-delivery-models" },
   ];
 
   const company = [
     { name: "About Us", href: "/about" },
-    { name: "Industries", href: "/industries" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/blog" },
   ];
 
   return (
-    <footer className="text-white" style={{ backgroundColor: '#5B5B5B' }}>
+    <footer className="text-white" style={{ backgroundColor: '#ce2124' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <img src={logo} alt="SipraHub" className="h-10 brightness-0 invert" />
-            </div>
             <p className="text-white/80 mb-6 leading-relaxed">
               Your trusted partner for AI-driven digital transformation, 
               delivering innovative solutions that drive measurable business growth.
             </p>
             <div className="flex space-x-4">
-              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button variant="glass" size="icon" className="w-12 h-12 border border-white/30 shadow-lg">
-                <Github className="h-5 w-5" />
-              </Button>
+              <a 
+                href="https://www.linkedin.com/company/siprahub/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://x.com/SipraHub" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Follow us on Twitter"
+              >
+                <Twitter className="h-6 w-6" />
+              </a>
             </div>
           </div>
 
@@ -86,6 +91,14 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-white/60" />
                 <span className="text-white/80 text-sm">contact@siprahub.com</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-4 w-4 text-white/60 mt-1 flex-shrink-0" />
+                <span className="text-white/80 text-sm">
+                  SipraHub<br />
+                  8th Floor, Tower 3B, BCIT, Bhartiya City,<br />
+                  Thanisandra Main Road, Bengaluru, 560064
+                </span>
               </div>
             </div>
             <Button variant="glass" size="lg" className="mt-6 w-full text-lg font-semibold px-6 py-3 border border-white/30 shadow-lg" asChild>

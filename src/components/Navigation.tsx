@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logo from "@/assets/siprahub-logo.png";
 const Navigation = () => {
@@ -12,16 +12,13 @@ const Navigation = () => {
     name: "Software Development",
     href: "/services/software-development"
   }, {
-    name: "Applied AI Services",
-    href: "/services/applied-ai-services"
-  }, {
     name: "Cybersecurity",
     href: "/services/cybersecurity"
   }, {
     name: "Cloud & Infrastructure",
     href: "/services/cloud-infra"
   }, {
-    name: "Flexible Delivery Models",
+    name: "Adaptive Delivery Solutions",
     href: "/services/software-delivery-models"
   }];
   return <nav className="bg-white border-b border-border sticky top-0 z-50 shadow-sm">
@@ -47,20 +44,45 @@ const Navigation = () => {
                 Services <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
-                {services.map(service => <DropdownMenuItem key={service.href} asChild>
+                {/* Software Development first */}
+                <DropdownMenuItem asChild>
+                  <Link to="/services/software-development" className="w-full">
+                    Software Development
+                  </Link>
+                </DropdownMenuItem>
+                
+                        {/* AI Services with submenu */}
+                        <DropdownMenuSub>
+                          <DropdownMenuSubTrigger className="flex items-center">
+                            AI Services
+                          </DropdownMenuSubTrigger>
+                          <DropdownMenuSubContent>
+                            <DropdownMenuItem asChild>
+                              <Link to="/services/ai-services" className="w-full">
+                                AI Solutions
+                              </Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem asChild>
+                              <Link to="/services/ai-advisory-consulting" className="w-full">
+                                AI Advisory & Consulting
+                              </Link>
+                            </DropdownMenuItem>
+                          </DropdownMenuSubContent>
+                        </DropdownMenuSub>
+                
+                {/* Other services */}
+                {services.filter(service => service.name !== "Software Development").map(service => <DropdownMenuItem key={service.href} asChild>
                     <Link to={service.href} className="w-full">
                       {service.name}
                     </Link>
                   </DropdownMenuItem>)}
               </DropdownMenuContent>
             </DropdownMenu>
+            
+            <Link to="/contact" className={`text-sm font-medium transition-smooth ${isActive("/contact") ? "text-primary" : "text-foreground hover:text-primary"}`}>
+              Contact
+            </Link>
 
-                    <Link to="/blog" className={`text-sm font-medium transition-smooth ${isActive("/blog") ? "text-primary" : "text-foreground hover:text-primary"}`}>
-                      Blog
-                    </Link>
-                    <Link to="/resources" className={`text-sm font-medium transition-smooth ${isActive("/resources") ? "text-primary" : "text-foreground hover:text-primary"}`}>
-                      Resources
-                    </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -82,15 +104,31 @@ const Navigation = () => {
             
             <div className="space-y-2">
               <span className="block text-sm font-medium text-muted-foreground">Services</span>
-              {services.map(service => <Link key={service.href} to={service.href} className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+              
+              {/* Software Development first */}
+              <Link to="/services/software-development" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+                Software Development
+              </Link>
+              
+                      {/* AI Services section */}
+                      <div className="pl-4 space-y-2">
+                        <span className="block text-sm font-medium text-muted-foreground">AI Services</span>
+                        <Link to="/services/ai-services" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+                          AI Solutions
+                        </Link>
+                        <Link to="/services/ai-advisory-consulting" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+                          AI Advisory & Consulting
+                        </Link>
+                      </div>
+              
+              {/* Other services */}
+              {services.filter(service => service.name !== "Software Development").map(service => <Link key={service.href} to={service.href} className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
                   {service.name}
                 </Link>)}
             </div>
-            <Link to="/blog" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
-              Blog
-            </Link>
-            <Link to="/resources" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
-              Resources
+            
+            <Link to="/contact" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+              Contact
             </Link>
           </div>}
       </div>

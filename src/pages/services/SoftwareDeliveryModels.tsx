@@ -10,19 +10,19 @@ import heroImage from "@/assets/hero-bg.jpg";
 const SoftwareDeliveryModels = () => {
   const highlights = [
     {
+      icon: Globe,
+      title: "Scalable Team Structures",
+      description: "Onshore, nearshore, and offshore delivery models that scale efficiently and balance cost with performance"
+    },
+    {
       icon: Users,
-      title: "Flexible Engagement Models",
-      description: "Contract, contract-to-hire, and permanent IT solutions tailored to your needs"
+      title: "Skilled Talent On Demand",
+      description: "Permanent, contract, and contract-to-hire IT talent designed to fit your exact business needs"
     },
     {
       icon: Target,
-      title: "Specialized Expertise",
-      description: "Skilled professionals in AI, cloud, and automation technologies"
-    },
-    {
-      icon: Globe,
-      title: "Global Talent Access",
-      description: "Offshore, nearshore, and onshore teams for maximum scalability"
+      title: "Agile Project Management",
+      description: "Flexible project management methodologies that adapt to your timeline and deliver results efficiently"
     }
   ];
 
@@ -118,11 +118,11 @@ const SoftwareDeliveryModels = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/40 font-semibold">
-              Flexible Delivery Models
+              Adaptive Delivery Solutions
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              Flexible Software Delivery{" "}
-              <span className="text-orange-300">Models for Every Need</span>
+              Adaptive Delivery Solutions{" "}
+              <span className="text-orange-300">for Every Need</span>
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
               Choose from our comprehensive range of delivery models designed to meet your specific requirements, budget, and timeline. From on-premise teams to offshore development centers, we provide the perfect solution for your software development needs.
@@ -134,9 +134,6 @@ const SoftwareDeliveryModels = () => {
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
-              <Button variant="outline-white" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40">
-                View Case Studies
-              </Button>
             </div>
           </div>
         </div>
@@ -147,10 +144,10 @@ const SoftwareDeliveryModels = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Delivery Model <span className="text-primary">Highlights</span>
+              Adaptive Delivery <span className="text-primary">Highlights</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our flexible delivery models are designed to adapt to your business needs, providing the right mix of expertise, cost-effectiveness, and scalability.
+              Our adaptive delivery solutions are designed to adapt to your business needs, providing the right mix of expertise, cost-effectiveness, and scalability.
             </p>
           </div>
 
@@ -236,29 +233,29 @@ const SoftwareDeliveryModels = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Choose Your Delivery Model?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Let our experts help you select the perfect delivery model for your project. We'll work with you to understand your requirements and recommend the best approach for success.
+            Start your digital transformation with SipraHub today! Get in touch with our experts for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Schedule Consultation
               </Link>
             </Button>
           </div>
           <div className="mt-8 text-white/80">
-            <p>+1 (555) 123-4567 | hello@siprahub.com</p>
+            <p>contact@siprahub.com</p>
           </div>
         </div>
       </section>

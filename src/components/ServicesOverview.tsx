@@ -18,12 +18,12 @@ const ServicesOverview = () => {
     },
     {
       icon: Brain,
-      title: "AI Services",
-      description: "Custom AI development, machine learning models, and intelligent automation solutions.",
+      title: "AI Services & Consulting",
+      description: "Custom AI development, machine learning models, intelligent automation solutions, and strategic AI consulting.",
       features: [
         "Custom ML Models",
         "Computer Vision & NLP",
-        "Real-time AI Systems"
+        "AI Strategy & Consulting"
       ],
       link: "/services/ai-services"
     },
@@ -45,7 +45,7 @@ const ServicesOverview = () => {
       features: [
         "AI-Driven Security Assessment",
         "Penetration Testing & VAPT",
-        "24/7 SOC Monitoring"
+        "Cloud Security"
       ],
       link: "/services/cybersecurity"
     }
@@ -106,14 +106,6 @@ const ServicesOverview = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="hero" size="xl" asChild className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
-            <Link to="/services">
-              Explore All Services
-              <ArrowRight className="ml-3 h-6 w-6" />
-            </Link>
-          </Button>
-        </div>
       </div>
     </section>
   );

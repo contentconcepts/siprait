@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Search, Target, TrendingUp, BarChart3, Lightbulb, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, BarChart3, Search, Target, TrendingUp, Lightbulb, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -10,39 +10,39 @@ import heroImage from "@/assets/hero-bg.jpg";
 const AIAdvisoryConsulting = () => {
   const capabilities = [
     {
+      icon: BarChart3,
+      title: "AI Strategy Development",
+      description: "Create comprehensive AI strategies that align with your business objectives and market positioning.",
+      technologies: ["Strategic Planning", "Market Analysis", "Technology Selection", "Implementation Planning"]
+    },
+    {
       icon: Search,
-      title: "AI Strategy Consultation",
-      description: "Develop a comprehensive AI roadmap tailored to your business needs and objectives.",
+      title: "Opportunity Identification",
+      description: "Uncover high-impact AI opportunities in your operations through comprehensive analysis of your business processes, data assets, and competitive landscape.",
       technologies: ["Business Process Analysis", "Data Assessment", "Competitive Intelligence", "Opportunity Mapping"]
     },
     {
       icon: Target,
-      title: "AI App Development",
-      description: "Build tailored AI solutions and algorithms designed for your unique challenges.",
+      title: "Strategic Roadmaps",
+      description: "Develop AI strategies aligned with your business goals, including implementation timelines, resource allocation, and success metrics.",
       technologies: ["Strategic Planning", "Implementation Roadmaps", "Resource Planning", "Success Metrics"]
     },
     {
       icon: TrendingUp,
-      title: "AI Integration Services",
-      description: "Seamlessly integrate AI into existing systems and workflows without disruption.",
+      title: "ROI Analysis",
+      description: "Prioritize initiatives with AI-driven analytics for maximum returns, providing detailed cost-benefit analysis and projected outcomes.",
       technologies: ["Cost-Benefit Analysis", "ROI Modeling", "Performance Forecasting", "Value Assessment"]
     },
     {
-      icon: BarChart3,
-      title: "AI-Powered Automation",
-      description: "Automate repetitive tasks and processes with intelligent AI that learns over time.",
-      technologies: ["Strategic Planning", "Market Analysis", "Technology Selection", "Implementation Planning"]
-    },
-    {
       icon: Lightbulb,
-      title: "Data Analysis & Insights",
-      description: "Extract insights using advanced analytics and visualization tools.",
+      title: "Innovation Consulting",
+      description: "Identify emerging AI technologies and trends that can provide competitive advantages for your business.",
       technologies: ["Technology Trends", "Innovation Assessment", "Competitive Analysis", "Future Planning"]
     },
     {
       icon: Users,
-      title: "AI Training & Education",
-      description: "Empower teams through customized training programs and workshops.",
+      title: "Change Management",
+      description: "Guide your organization through AI transformation with change management strategies and training programs.",
       technologies: ["Change Strategy", "Training Programs", "Organizational Design", "Culture Transformation"]
     }
   ];
@@ -110,11 +110,6 @@ const AIAdvisoryConsulting = () => {
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
-              <Button variant="outline-white" size="xl" asChild>
-                <Link to="/case-studies">
-                  View Success Stories
-                </Link>
-              </Button>
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 mt-12">
@@ -167,12 +162,12 @@ const AIAdvisoryConsulting = () => {
         </div>
       </section>
 
-      {/* Why Choose Our AI Advisory */}
+      {/* Why Choose Our AI Advisory & Consulting */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Why Choose Our <span className="text-primary">AI Advisory</span>
+              Why Choose Our <span className="text-primary">AI Advisory & Consulting</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Industry-leading AI expertise combined with proven methodologies to deliver strategic AI solutions that transform your business.
@@ -198,29 +193,29 @@ const AIAdvisoryConsulting = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of companies that have accelerated their growth with our strategic AI solutions. Let's discuss how we can help you achieve your AI transformation goals.
+            Start your AI transformation with SipraHub today! Get in touch with our experts for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/contact" className="text-white">
                 Schedule Strategy Session
               </Link>
             </Button>
           </div>
           <div className="mt-8 text-white/80">
-            <p>+1 (555) 123-4567 | hello@siprahub.com</p>
+            <p>contact@siprahub.com</p>
           </div>
         </div>
       </section>
