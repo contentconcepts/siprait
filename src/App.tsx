@@ -7,6 +7,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import JobDetail from "./pages/JobDetail";
 import CaseStudies from "./pages/CaseStudies";
 import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/jobs/:jobId" element={<JobDetail />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/resources" element={<Resources />} />
