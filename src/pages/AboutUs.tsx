@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Quote, Target, Eye, Heart, CheckCircle, Star, ArrowRight, Linkedin } from "lucide-react";
+import { Target, Eye, Heart, CheckCircle, Star, ArrowRight, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
@@ -260,30 +260,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonial Section */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <Quote className="h-12 w-12 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              What Our Clients Say
-            </h2>
-          </div>
-          
-          <Card className="bg-white border-0 shadow-hero">
-            <CardContent className="p-8">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6 italic">
-                "[Sample Client Name] and the team helped us completely transform our digital strategy. Their deep knowledge of AI and cybersecurity gave us a competitive edge we didn't have before. The project was delivered on time and exceeded our expectations."
-              </p>
-              <div className="text-primary font-semibold">
-                [Name], [Title], [Company]
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
 
       <Footer />
     </div>

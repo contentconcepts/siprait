@@ -86,16 +86,7 @@ const ServicesOverview = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button variant="outline" size="sm" asChild className="w-fit mx-auto">
+                <Button variant="outline" size="sm" asChild className="w-fit mt-4">
                   <Link to={service.link}>
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
