@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-// Import case study images - Add these images to src/assets folder
-// import dhiChatInterface from "@/assets/dhi-chat-interface.png";
-// import dhiLandingPage from "@/assets/dhi-landing-page.png";
-// import copilotInterface from "@/assets/copilot-interface.png";
+// Import case study images
+import dhiChatInterface from "@/assets/dhi-chat-interface.png";
+import dhiLandingPage from "@/assets/dhi-landing-page.png";
+import copilotInterface from "@/assets/copilot-interface.png";
 
 const CaseStudyDetail = () => {
   const { id } = useParams();
@@ -52,12 +52,12 @@ const CaseStudyDetail = () => {
       testimonialCompany: "Poorna Neuro",
       images: [
         {
-          url: "/src/assets/dhi-chat-interface.png",
+          url: dhiChatInterface,
           alt: "Dhi AI Assistant Chat Interface",
           caption: "Dhi's conversational interface provides instant responses to patient queries"
         },
         {
-          url: "/src/assets/dhi-landing-page.png",
+          url: dhiLandingPage,
           alt: "Meet Dhi - Your 24/7 Healthcare Assistant",
           caption: "Dhi supports six regional languages for maximum accessibility"
         }
@@ -101,7 +101,7 @@ const CaseStudyDetail = () => {
       testimonialCompany: "Insurance Company",
       images: [
         {
-          url: "/src/assets/copilot-interface.png",
+          url: copilotInterface,
           alt: "AI Co-Pilot Real-time Assistance Interface",
           caption: "Real-time intent and sentiment analysis with suggested responses for faster, more empathetic customer support"
         }
