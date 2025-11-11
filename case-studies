@@ -1,0 +1,48 @@
+## Digital assistant for clinic
+
+**Client:** Poorna Neuro
+**Use case:** 24/7 patient queries
+**Channels:** Voice and text
+**Languages:** English, Hindi, Tamil, Telugu, Kannada, Malayalam
+
+### Challenge
+
+* Patients needed doctor, service and location details outside clinic hours, but had no way to get instant answers. 
+* Administrative staff were overloaded with repetitive queries, pulling time from complex tasks. 
+* The clinic wanted consistent, accurate, multilingual information for a diverse patient base. 
+
+### Solution
+
+* Built ‘Dhi’, a natural voice and text assistant with low‑latency audio for hands‑free conversations. 
+* Full multilingual support across six regional languages to maximise accessibility. 
+* Safety guardrails that restrict knowledge to verified clinic information and politely decline medical advice. 
+
+### Results
+
+* Patients receive instant, accurate answers at any hour, in their preferred language and mode. 
+* Staff time is freed for scheduling, billing and patient care, improving operational efficiency. 
+* A modern digital front door that strengthens the clinic’s brand and accessibility. 
+
+## AI service desk co‑pilot
+
+**Client:** Customer support team in insurance
+**Use case:** Live agent augmentation
+**Channels:** In‑chat guidance
+
+### Challenge
+
+* Service quality varied in stressful live chats and empathy was inconsistent. 
+* Agents spent time identifying intent and sentiment, extracting policy data and searching knowledge. 
+* No real‑time procedural guidance on next best actions, which increased handling time and errors. 
+
+### Solution
+
+* Live analysis of customer intent and sentiment so agents understand goals and tone instantly. 
+* One‑click suggested replies plus automatic extraction of key details like policy numbers and names. 
+* Contextual checklists and quick actions, for example opening a claim form directly from the chat. 
+
+### Results
+
+* Faster resolutions with fewer errors through real‑time co‑pilot support. 
+* More consistent, empathetic responses that raise service quality. 
+* Lower training time and higher agent productivity, leading to happier customers. 

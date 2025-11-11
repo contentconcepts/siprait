@@ -79,6 +79,9 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
+            <Link to="/case-studies" className={`text-sm font-medium transition-smooth ${isActive("/case-studies") ? "text-primary" : "text-foreground hover:text-primary"}`}>
+              Case Studies
+            </Link>
             <Link to="/careers" className={`text-sm font-medium transition-smooth ${isActive("/careers") ? "text-primary" : "text-foreground hover:text-primary"}`}>
               Careers
             </Link>
@@ -130,6 +133,9 @@ const Navigation = () => {
                 </Link>)}
             </div>
             
+            <Link to="/case-studies" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+              Case Studies
+            </Link>
             <Link to="/careers" className="block text-sm font-medium text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
               Careers
             </Link>
