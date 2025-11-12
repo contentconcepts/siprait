@@ -261,6 +261,33 @@ const AboutUs = () => {
         </div>
       </section>
 
+      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Join Our Team?
+          </h2>
+          <p className="text-xl text-white/90 mb-8">
+            Start your journey with SipraHub today! Get in touch with our team to explore opportunities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/careers#career-categories" className="text-white">
+                View Open Positions
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="outline-white" size="lg" asChild>
+              <Link to="/careers/jobs" className="text-white">
+                Send Your Resume
+              </Link>
+            </Button>
+          </div>
+          <div className="mt-8 text-white/80">
+            <p>contact@siprahub.com</p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

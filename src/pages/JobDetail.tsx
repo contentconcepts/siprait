@@ -125,7 +125,7 @@ const JobDetail = () => {
             </div>
             <div className="mt-4 md:mt-0">
               <Button size="lg" asChild>
-                <Link to="/contact">Apply Now</Link>
+                <Link to="/careers/jobs">Apply Now</Link>
               </Button>
             </div>
           </div>
@@ -204,7 +204,7 @@ const JobDetail = () => {
           <h2 className="text-2xl font-bold mb-4">How to Apply</h2>
           <p className="text-white/90 mb-6">{job.applicationInfo}</p>
           <Button variant="outline-white" size="lg" asChild>
-            <Link to="/contact">Apply Now</Link>
+            <Link to="/careers/jobs">Apply Now</Link>
           </Button>
         </div>
       </div>

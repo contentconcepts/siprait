@@ -256,8 +256,12 @@ const CaseStudies = () => {
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {filteredStudies.map((study) => (
-                <Card key={study.id} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group">
-                  <CardContent className="p-6">
+                <Card
+                  key={study.id}
+                  className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group"
+                >
+                  <Link to={`/case-studies/${study.id}`} className="block h-full">
+                    <CardContent className="p-6 h-full flex flex-col gap-6">
                     <div className="flex items-start justify-between mb-4">
                       <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
                         {study.useCase}
@@ -267,12 +271,12 @@ const CaseStudies = () => {
                       </Badge>
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold text-foreground mb-2 transition-colors group-hover:text-primary">
                       {study.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">{study.company}</p>
+                    <p className="text-sm text-muted-foreground">{study.company}</p>
                     
-                    <div className="space-y-3 mb-6">
+                    <div className="space-y-3 flex-1">
                       <div>
                         <p className="text-xs font-semibold text-foreground mb-1">Outcome</p>
                         <p className="text-sm text-muted-foreground">{study.outcome}</p>
@@ -290,14 +294,12 @@ const CaseStudies = () => {
                         )}
                       </div>
                     </div>
-
-                    <Button variant="outline" size="sm" className="w-full" asChild>
-                      <Link to={`/case-studies/${study.id}`}>
-                        Read Full Case Study
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    <div className="flex items-center text-primary font-semibold text-sm gap-2">
+                      <span>Read Full Case Study</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
                   </CardContent>
+                  </Link>
                 </Card>
               ))}
             </div>
