@@ -47,7 +47,7 @@ const CaseStudyDetail = () => {
         "24/7 availability providing consistent service outside clinic hours"
       ],
       testimonial: "Dhi has been a game-changer for our clinic. Our patients love the instant responses in their preferred language, and our staff can focus on more meaningful work. This is the future of patient communication.",
-      testimonialAuthor: "Dr. Priya Sharma",
+      testimonialAuthor: "Dr. Rajesh B Iyer",
       testimonialRole: "Medical Director",
       testimonialCompany: "Poorna Neuro",
       images: [
