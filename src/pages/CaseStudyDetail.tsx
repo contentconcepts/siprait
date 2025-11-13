@@ -48,7 +48,7 @@ const CaseStudyDetail = () => {
       ],
       testimonial: "Dhi has been a game-changer for our clinic. Our patients love the instant responses in their preferred language, and our staff can focus on more meaningful work. This is the future of patient communication.",
       testimonialAuthor: "Dr. Rajesh B Iyer",
-      testimonialRole: "Medical Director",
+      testimonialRole: "",
       testimonialCompany: "Poorna Neuro",
       images: [
         {
@@ -246,7 +246,7 @@ const CaseStudyDetail = () => {
             <div className="bg-white rounded-lg p-6 border-l-4 border-primary mt-8">
               <p className="text-lg italic text-foreground mb-4">"{study.challengeQuote}"</p>
               <div className="text-sm text-muted-foreground">
-                — {study.testimonialAuthor}, {study.testimonialRole}, {study.testimonialCompany}
+                — {study.testimonialAuthor}{study.testimonialRole && `, ${study.testimonialRole}`}, {study.testimonialCompany}
               </div>
             </div>
           )}
@@ -265,7 +265,7 @@ const CaseStudyDetail = () => {
             <div className="bg-gradient-subtle rounded-lg p-6 border-l-4 border-primary mt-8">
               <p className="text-lg italic text-foreground mb-4">"{study.solutionQuote}"</p>
               <div className="text-sm text-muted-foreground">
-                — {study.testimonialAuthor}, {study.testimonialRole}, {study.testimonialCompany}
+                — {study.testimonialAuthor}{study.testimonialRole && `, ${study.testimonialRole}`}, {study.testimonialCompany}
               </div>
             </div>
           )}
@@ -317,7 +317,9 @@ const CaseStudyDetail = () => {
             </p>
             <div>
               <div className="font-semibold text-foreground">{study.testimonialAuthor}</div>
-              <div className="text-sm text-muted-foreground">{study.testimonialRole}, {study.testimonialCompany}</div>
+              <div className="text-sm text-muted-foreground">
+                {study.testimonialRole ? `${study.testimonialRole}, ` : ''}{study.testimonialCompany}
+              </div>
             </div>
           </div>
         </div>
