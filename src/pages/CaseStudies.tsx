@@ -66,6 +66,25 @@ const CaseStudies = () => {
       ],
       duration: "2 months",
       team: "4 AI specialists"
+    },
+    {
+      id: 3,
+      title: "Editorial Management Platform",
+      company: "ContentConcepts Editorial Services",
+      useCase: "End-to-end Manuscript Editing Workflow",
+      industry: "Publishing",
+      businessFunction: "Operations",
+      aiTechnologies: ["Workflow Automation", "Document Management", "Authentication Systems"],
+      problem: "Conflicting role models and unreliable authentication with complex status management",
+      solution: "Built comprehensive web platform with multi-role model, real-time pricing, and automated workflow",
+      outcome: "Streamlined operations through automated assignment and role-based access",
+      metrics: [
+        { label: "User Roles", value: "3" },
+        { label: "Email Templates", value: "7" },
+        { label: "Workflow Automation", value: "100%" }
+      ],
+      duration: "4 months",
+      team: "6 developers"
     }
   ];
 

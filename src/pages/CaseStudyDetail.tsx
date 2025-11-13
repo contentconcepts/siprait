@@ -106,6 +106,44 @@ const CaseStudyDetail = () => {
           caption: "Real-time intent and sentiment analysis with suggested responses for faster, more empathetic customer support"
         }
       ]
+    },
+    "3": {
+      id: 3,
+      title: "Editorial Management Platform",
+      company: "ContentConcepts Editorial Services",
+      industry: "Publishing",
+      useCase: "End-to-end Manuscript Editing Workflow",
+      businessFunction: "Operations",
+      aiTechnologies: ["Workflow Automation", "Document Management", "Authentication Systems"],
+      metrics: [
+        { label: "User Roles", value: "3" },
+        { label: "Email Templates", value: "7" },
+        { label: "Workflow Automation", value: "100%" }
+      ],
+      stats: {
+        duration: "4 months",
+        team: "6 developers",
+        revenue: "N/A",
+        employees: "15+"
+      },
+      about: "ContentConcepts Editorial Services is a USA-based editorial services company providing manuscript editing services to academic and professional clients. With a distributed team of editors and growing client base, they needed a comprehensive platform to manage the entire editing workflow from quote request to final delivery.",
+      challenge: "ContentConcepts faced significant operational challenges with conflicting role models between platform roles and application roles, unreliable authentication and redirect handling during sign-in and sign-out, and complex status management across customers, editors, and administrators. Additionally, handling uploads and versions of original and edited files required reliable feedback mechanisms to ensure smooth operations.",
+      challengeQuote: "We needed a platform that could seamlessly manage the entire manuscript editing workflow while handling multiple user roles, complex status transitions, and reliable file management. Our existing processes were manual and error-prone.",
+      solution: "SipraHub developed a comprehensive editorial management platform with a clear multi-role model using a custom 'app_role' field, role-based routing, and granular permissions. The platform includes a public quote flow with real-time pricing by word count and service type, delivery estimates, document upload, and automatic job IDs with PR-, SE-, and PE- prefixes. The customer dashboard enables quote requests, simulated payments, status tracking, and file downloads. The editor dashboard supports assignment acceptance/rejection, multi-file uploads, progress tracking with status badges, and completion emails. An admin panel provides live statistics, order assignment, user management, and an email template manager. The solution features stable Google OAuth with fallback methods, error handling, explicit redirect URLs, and robust Base64 file handling with array-based document storage and progress indicators.",
+      solutionQuote: "The platform has transformed our operations. We now have complete visibility into every manuscript's journey, automated notifications keep everyone informed, and our editors can focus on what they do best—editing.",
+      results: [
+        "Streamlined operations through automated assignment and notifications",
+        "Role-based access with tailored interfaces for each user type (customers, editors, administrators)",
+        "Real-time tracking that gives all stakeholders visibility of manuscript status",
+        "Scalable, modular architecture that supports rapid feature additions",
+        "Professional, responsive user experience with clear loading, error and success states",
+        "Seven automated email templates for new orders, assignments, acceptances, rejections, and completions",
+        "Reliable file handling with progress indicators and version management"
+      ],
+      testimonial: "SipraHub's editorial management platform has completely transformed how we operate. Our team can now manage hundreds of manuscripts simultaneously with complete visibility and control. The automated workflows save us countless hours every week.",
+      testimonialAuthor: "Sarah Miller",
+      testimonialRole: "Operations Director",
+      testimonialCompany: "ContentConcepts Editorial Services"
     }
   };
 
