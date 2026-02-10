@@ -22,6 +22,7 @@ import AIConsulting from "./pages/services/AIConsulting";
 import CloudInfra from "./pages/services/CloudInfra";
 import ComingSoon from "./pages/ComingSoon";
 import CareersJobs from "./pages/CareersJobs";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/services/ai-consulting" element={<AIConsulting />} />
           <Route path="/services/cloud-infra" element={<CloudInfra />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Navigate to="/coming-soon" replace />} />
         </Routes>
