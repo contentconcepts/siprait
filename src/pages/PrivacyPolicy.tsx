@@ -49,52 +49,89 @@ const PrivacyPolicy = () => {
 
           <article className="prose prose-lg max-w-none text-foreground">
             <p className="text-muted-foreground mb-6">
-              Last updated: March 2026
+              Last Updated: February 2, 2026
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Our Commitment</h2>
-            <p className="text-muted-foreground mb-4">
-              SipraHub is committed to protecting the privacy and confidentiality of all personal, professional, and client information we collect.
+            <p className="text-muted-foreground mb-8">
+              At SipraHub, we are committed to protecting the privacy and security of our users. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website, <a href="https://www.siprahub.com" className="text-primary hover:underline">www.siprahub.com</a>, or use our professional services.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Information Collection & Purpose</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. Information We Collect</h2>
             <p className="text-muted-foreground mb-4">
-              We gather data such as employee records, resumes, payroll details, contact information, project-related information, and IT system usage solely for legitimate business purposes, including human resource management, IT services, regulatory compliance, and ensuring the security of our systems.
+              We collect information that helps us provide a personalized and efficient experience. This includes:
+            </p>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li><strong>Personal Information:</strong> Information you provide directly to us, such as your name, email address, phone number, company name, and job title when you fill out a contact form or request a consultation.</li>
+              <li><strong>Usage Data:</strong> Details about your visit to our site, including your IP address, browser type, operating system, pages viewed, and the duration of your visit.</li>
+              <li><strong>Cookies and Tracking:</strong> We use cookies and similar tracking technologies to track activity on our website and hold certain information to improve user experience.</li>
+              <li><strong>Payment Information:</strong> If applicable, billing details are processed through secure, third-party payment gateways. We do not store sensitive cardholder data on our servers.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">2. How We Use Your Information</h2>
+            <p className="text-muted-foreground mb-4">
+              We use the data we collect for various professional purposes:
+            </p>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>To provide, maintain, and improve our website and service offerings.</li>
+              <li>To communicate with you regarding inquiries, project updates, or promotional materials.</li>
+              <li>To analyze website traffic and usage patterns to optimize our content.</li>
+              <li>To ensure the security of our platform and prevent fraudulent activity.</li>
+              <li>To comply with legal obligations and industry standards.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">3. Information Sharing and Disclosure</h2>
+            <p className="text-muted-foreground mb-4">
+              SipraHub does not sell or rent your personal information to third parties. We may share your data only in the following circumstances:
+            </p>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li><strong>Service Providers:</strong> With trusted third-party vendors who assist us in operating our website or conducting our business (e.g., hosting providers, analytics tools).</li>
+              <li><strong>Legal Requirements:</strong> If required to do so by law or in response to valid requests by public authorities.</li>
+              <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, your information may be transferred as a business asset.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">4. Data Security</h2>
+            <p className="text-muted-foreground mb-4">
+              We implement industry-standard technical and organizational measures to protect your personal data. While we strive to use commercially acceptable means to protect your information, please remember that no method of transmission over the internet is 100% secure.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Data Storage & Safeguards</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">5. Data Retention</h2>
             <p className="text-muted-foreground mb-4">
-              All information is stored securely with appropriate technical and organizational safeguards, including encryption, controlled access, and regular backups, to prevent unauthorized access or misuse.
+              We retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, or to the extent necessary to comply with our legal obligations and resolve disputes.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Information Sharing</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">6. Third-Party Links</h2>
             <p className="text-muted-foreground mb-4">
-              Personal and professional data is shared internally only with authorized personnel and externally with trusted third-party service providers under strict confidentiality agreements, and only when necessary to fulfill contractual or legal obligations.
+              Our website may contain links to external sites that are not operated by us. We have no control over, and assume no responsibility for, the content or privacy practices of any third-party sites.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Individual Rights & Retention</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">7. Your Rights</h2>
             <p className="text-muted-foreground mb-4">
-              Individuals have the right to access, correct, or request deletion of their personal data. Data is retained only for as long as required for business, legal, or regulatory purposes.
+              Depending on your jurisdiction, you may have the following rights:
+            </p>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>The right to access, update, or delete the information we have on you.</li>
+              <li>The right to object to our processing of your personal data.</li>
+              <li>The right to withdraw consent at any time where we relied on your consent to process your information.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">8. Children's Privacy</h2>
+            <p className="text-muted-foreground mb-4">
+              Our services are not directed to anyone under the age of 13. We do not knowingly collect personally identifiable information from children.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Website Visitors & Cookies</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">9. Changes to This Policy</h2>
             <p className="text-muted-foreground mb-4">
-              For website visitors, we handle cookies and analytics data transparently, providing options to manage preferences.
+              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Policy Updates</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">10. Contact Us</h2>
             <p className="text-muted-foreground mb-4">
-              This Privacy Policy may be updated from time to time, and all updates will be communicated through our website.
+              If you have any questions about this Privacy Policy, please contact us at:
             </p>
-
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Contact Us</h2>
-            <p className="text-muted-foreground mb-4">
-              If you have questions about this Privacy Policy, please contact us at{" "}
-              <a href="mailto:contact@siprahub.com" className="text-primary hover:underline">
-                contact@siprahub.com
-              </a>
-              .
-            </p>
+            <ul className="list-none text-muted-foreground mb-4 space-y-1">
+              <li><strong>SipraHub Website:</strong> <a href="https://www.siprahub.com" className="text-primary hover:underline">www.siprahub.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@siprahub.com" className="text-primary hover:underline">info@siprahub.com</a></li>
+            </ul>
           </article>
         </div>
       </section>
