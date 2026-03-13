@@ -109,7 +109,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © 2024 SipraHub. All rights reserved.
+            © 2026 SipraHub. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-white/60 hover:text-white/80 text-sm transition-smooth">
