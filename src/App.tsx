@@ -61,6 +61,7 @@ const App = () => (
           <Route path="/services/ai-consulting" element={<AIConsulting />} />
           <Route path="/services/cloud-infra" element={<CloudInfra />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Navigate to="/coming-soon" replace />} />
         </Routes>
