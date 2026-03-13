@@ -1,39 +1,13 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Shield, ShoppingBag, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CASE_STUDIES } from "@/data/caseStudies";
 
 const CaseStudiesSection = () => {
-  const caseStudies = [
-    {
-      icon: TrendingUp,
-      title: "Healthcare Transformation",
-      industry: "Healthcare",
-      problem: "Inefficient patient care processes and compliance challenges.",
-      solution: "Deployed AI-powered analytics platform with on-prem setup.",
-      outcome: "30% improved efficiency and enhanced compliance.",
-      color: "bg-success/10 text-success"
-    },
-    {
-      icon: Shield,
-      title: "Fintech Fraud Detection",
-      industry: "Fintech",
-      problem: "High risk of financial fraud in digital transactions.",
-      solution: "Implemented AI-driven fraud detection using cloud-based tech stack.",
-      outcome: "Reduced fraud risks by 40%.",
-      color: "bg-primary/10 text-primary"
-    },
-    {
-      icon: ShoppingBag,
-      title: "E-Commerce Personalization",
-      industry: "E-Commerce",
-      problem: "Low customer engagement and conversion rates.",
-      solution: "Built AI-enhanced shopping platform with ODC support.",
-      outcome: "25% increase in sales through personalized experiences.",
-      color: "bg-accent/10 text-accent"
-    }
-  ];
+  // Show the first 3 real case studies on the homepage
+  const featured = CASE_STUDIES.slice(0, 3);
 
   return (
     <section className="py-20 bg-gradient-subtle">
@@ -44,47 +18,55 @@ const CaseStudiesSection = () => {
             <span className="text-primary">Domains and Technologies</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            See how SipraHub's tailored AI solutions have delivered measurable 
+            See how SipraHub's tailored AI solutions have delivered measurable
             success and transformative outcomes for businesses across industries.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index) => (
-            <Card 
-              key={index} 
-              className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`p-2 rounded-lg ${study.color}`}>
-                    <study.icon className="h-6 w-6" />
+          {featured.map((study) => (
+            <Link key={study.id} to={`/case-studies/${study.id}`} className="block h-full">
+              <Card className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group h-full">
+                <CardContent className="p-6 h-full flex flex-col gap-4">
+                  {/* Header badges */}
+                  <div className="flex items-center justify-between">
+                    <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
+                      {study.useCase}
+                    </Badge>
+                    <Badge variant="secondary" className="text-xs">
+                      {study.industry}
+                    </Badge>
                   </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {study.industry}
-                  </Badge>
-                </div>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-smooth">
-                  {study.title}
-                </h3>
+                  {/* Title + company */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-1 group-hover:text-primary transition-smooth">
+                      {study.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">{study.company}</p>
+                  </div>
 
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <span className="font-medium text-destructive">Problem: </span>
-                    <span className="text-muted-foreground">{study.problem}</span>
+                  {/* Outcome */}
+                  <p className="text-sm text-muted-foreground flex-1">{study.outcome}</p>
+
+                  {/* Key metrics strip */}
+                  <div className="grid grid-cols-3 gap-2 py-3 border-t border-border">
+                    {study.metrics.map((m) => (
+                      <div key={m.label} className="text-center">
+                        <div className="text-lg font-bold text-primary">{m.value}</div>
+                        <div className="text-[10px] text-muted-foreground leading-tight">{m.label}</div>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <span className="font-medium text-primary">Solution: </span>
-                    <span className="text-muted-foreground">{study.solution}</span>
+
+                  {/* CTA link */}
+                  <div className="flex items-center text-primary font-semibold text-sm gap-2">
+                    <span>Read Full Case Study</span>
+                    <ArrowRight className="h-4 w-4" />
                   </div>
-                  <div>
-                    <span className="font-medium text-success">Outcome: </span>
-                    <span className="text-muted-foreground">{study.outcome}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
@@ -95,7 +77,7 @@ const CaseStudiesSection = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          
+
           <p className="text-lg font-semibold text-foreground">
             SipraHub drives{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -110,3 +92,8 @@ const CaseStudiesSection = () => {
 };
 
 export default CaseStudiesSection;
+
+
+const CaseStudiesSection = () => {
+  const caseStudies = [
+    {

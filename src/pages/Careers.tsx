@@ -179,6 +179,17 @@ const Careers = () => {
                 View Open Positions
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
+              <Button 
+                variant="outline-white" 
+                size="xl" 
+                className="text-xl font-semibold px-8 py-4"
+                asChild
+              >
+                <Link to="/careers/apply">
+                  Share Resume
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -227,7 +238,7 @@ const Careers = () => {
             {jobOpenings.filter(job => job.categories?.includes(category.title) || job.category === category.title).length > 0 ? (
               <div className="space-y-3 pt-4">
                 {jobOpenings.filter(job => job.categories?.includes(category.title) || job.category === category.title).map((job) => (
-                            <div key={job.id} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div key={job.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                               <div className="flex-1">
                                 <Link 
                                   to={`/jobs/${job.id}`}
@@ -237,9 +248,14 @@ const Careers = () => {
                                 </Link>
                                 <p className="text-sm text-muted-foreground mt-1">{job.location} • {job.workMode}</p>
                               </div>
-                              <Button variant="outline" size="sm" asChild>
-                                <Link to={`/jobs/${job.id}`}>View Details</Link>
-                              </Button>
+                              <div className="flex gap-2 flex-shrink-0">
+                                <Button variant="outline" size="sm" asChild>
+                                  <Link to={`/jobs/${job.id}`}>View Details</Link>
+                                </Button>
+                                <Button variant="default" size="sm" asChild>
+                                  <Link to="/careers/apply">Apply</Link>
+                                </Button>
+                              </div>
                             </div>
                           ))}
                         </div>

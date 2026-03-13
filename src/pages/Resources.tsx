@@ -1,3 +1,5 @@
+import { useState, FormEvent } from "react";
+import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -28,6 +30,22 @@ import cybersecurityImage from "@/assets/cybersecurity-hero.jpg";
 import aboutImage from "@/assets/about-hero.jpg";
 
 const Resources = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+
+  const handleNewsletterSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterEmail)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    setNewsletterEmail("");
+    toast.success("Thanks for subscribing! We'll send you our latest resources and updates.");
+  };
+
   const featuredResources = [
     {
       id: 1,
@@ -337,7 +355,8 @@ const Resources = () => {
             {resourceCategories.map((category, index) => {
               const categoryImages = [missionImage, cybersecurityImage, heroImage, teamImage, aboutImage, missionImage];
               return (
-                <Card key={index} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group overflow-hidden">
+                <Link key={index} to={`/resources?category=${encodeURIComponent(category.name)}`}>
+                <Card className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group overflow-hidden h-full">
                 <div className="relative h-32">
                   <img 
                     src={categoryImages[index % categoryImages.length]} 
@@ -366,6 +385,7 @@ const Resources = () => {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
               );
             })}
           </div>
@@ -461,7 +481,7 @@ const Resources = () => {
                             <span>{template.downloads} downloads</span>
                           </div>
                         </div>
-                        <Button variant="outline" size="sm" className="ml-4">
+                        <Button variant="outline" size="sm" className="ml-4 min-h-[44px] min-w-[44px]" aria-label={`Download ${template.name}`}>
                           <Download className="h-4 w-4" />
                         </Button>
                       </div>
@@ -514,7 +534,7 @@ const Resources = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-subtle">
+      <section id="newsletter-signup" className="py-20 bg-gradient-subtle scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Get Exclusive Resources & Updates
@@ -522,16 +542,19 @@ const Resources = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Subscribe to our newsletter and be the first to access new resources, webinars, and industry insights.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              aria-label="Email for newsletter subscription"
             />
-            <Button size="xl" className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
+            <Button type="submit" size="xl" className="text-xl font-semibold px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
               Subscribe
             </Button>
-          </div>
+          </form>
         </div>
       </section>
 

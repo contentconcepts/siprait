@@ -22,6 +22,11 @@ import AIConsulting from "./pages/services/AIConsulting";
 import CloudInfra from "./pages/services/CloudInfra";
 import ComingSoon from "./pages/ComingSoon";
 import CareersJobs from "./pages/CareersJobs";
+import ResumeSubmission from "./pages/ResumeSubmission";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import BlogPostDetail from "./pages/BlogPostDetail";
+import ResourceDetail from "./pages/ResourceDetail";
 
 const queryClient = new QueryClient();
 
@@ -37,12 +42,17 @@ const App = () => (
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/apply" element={<ResumeSubmission />} />
           <Route path="/jobs/:jobId" element={<JobDetail />} />
           <Route path="/careers/jobs" element={<CareersJobs />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/resources" element={<Resources />} />
+          <Route path="/blog/:slug" element={<BlogPostDetail />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/:slug" element={<ResourceDetail />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/services/cybersecurity" element={<Cybersecurity />} />
           <Route path="/services/ai-services" element={<AppliedAI />} />
           <Route path="/services/ai-advisory-consulting" element={<AIAdvisoryConsulting />} />

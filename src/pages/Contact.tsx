@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
         <div
@@ -59,13 +59,15 @@ const Contact = () => {
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/careers/jobs" className="text-white">
+              <Link to="/careers/apply" className="text-white">
                 Send Your Resume
               </Link>
             </Button>
           </div>
           <div className="mt-8 text-white/80">
-            <p>contact@siprahub.com</p>
+            <a href="mailto:contact@siprahub.com" className="hover:text-white underline underline-offset-2 transition-colors">
+              contact@siprahub.com
+            </a>
           </div>
         </div>
       </section>
