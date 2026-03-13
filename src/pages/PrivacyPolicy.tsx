@@ -49,32 +49,42 @@ const PrivacyPolicy = () => {
 
           <article className="prose prose-lg max-w-none text-foreground">
             <p className="text-muted-foreground mb-6">
-              Last updated: February 2025
+              Last updated: March 2026
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Introduction</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Our Commitment</h2>
             <p className="text-muted-foreground mb-4">
-              SipraHub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              SipraHub is committed to protecting the privacy and confidentiality of all personal, professional, and client information we collect.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Information We Collect</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Information Collection & Purpose</h2>
             <p className="text-muted-foreground mb-4">
-              We may collect personal information that you voluntarily provide when you contact us, subscribe to our newsletter, apply for a job, or request a consultation. This may include your name, email address, phone number, and any information you include in messages or attachments.
+              We gather data such as employee records, resumes, payroll details, contact information, project-related information, and IT system usage solely for legitimate business purposes, including human resource management, IT services, regulatory compliance, and ensuring the security of our systems.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How We Use Your Information</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Data Storage & Safeguards</h2>
             <p className="text-muted-foreground mb-4">
-              We use the information we collect to respond to your inquiries, process job applications, send newsletters (with your consent), improve our services, and comply with legal obligations.
+              All information is stored securely with appropriate technical and organizational safeguards, including encryption, controlled access, and regular backups, to prevent unauthorized access or misuse.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Information Sharing</h2>
             <p className="text-muted-foreground mb-4">
-              We do not sell your personal information. We may share information with service providers who assist our operations, or when required by law.
+              Personal and professional data is shared internally only with authorized personnel and externally with trusted third-party service providers under strict confidentiality agreements, and only when necessary to fulfill contractual or legal obligations.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Security</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Individual Rights & Retention</h2>
             <p className="text-muted-foreground mb-4">
-              We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, or destruction.
+              Individuals have the right to access, correct, or request deletion of their personal data. Data is retained only for as long as required for business, legal, or regulatory purposes.
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Website Visitors & Cookies</h2>
+            <p className="text-muted-foreground mb-4">
+              For website visitors, we handle cookies and analytics data transparently, providing options to manage preferences.
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Policy Updates</h2>
+            <p className="text-muted-foreground mb-4">
+              This Privacy Policy may be updated from time to time, and all updates will be communicated through our website.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Contact Us</h2>

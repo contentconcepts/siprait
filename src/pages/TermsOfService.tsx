@@ -49,32 +49,63 @@ const TermsOfService = () => {
 
           <article className="prose prose-lg max-w-none text-foreground">
             <p className="text-muted-foreground mb-6">
-              Last updated: February 2025
+              Last updated: March 2026
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Acceptance of Terms</h2>
-            <p className="text-muted-foreground mb-4">
-              By accessing or using the SipraHub website and services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.
+            <p className="text-muted-foreground mb-8">
+              Welcome to SipraHub. By accessing or using our services—including our website, HR system, or IT solutions—you agree to comply with these Terms and Services. Please read them carefully before using our services.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Use of Services</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground mb-4">
-              You agree to use our website and services only for lawful purposes. You may not use our services to transmit harmful code, violate any applicable laws, or infringe on the rights of others.
+              By using our services, you confirm that you have read, understood, and agree to these Terms and Services and all applicable laws and regulations. If you do not agree, please do not use our services.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Intellectual Property</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">2. Services Provided</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>IT services, project management support, manpower and HR solutions, and related consulting services.</li>
+              <li>Services are provided according to agreements made between the company and clients, employees, or contractors.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">3. User Responsibilities</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>Provide accurate, complete, and up-to-date information when accessing our services.</li>
+              <li>Keep login credentials, accounts, and any personal or professional data secure and confidential.</li>
+              <li>Do not engage in unauthorized or unlawful use of the system, including hacking, sharing confidential information, or disrupting services.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">4. Company Responsibilities</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>Deliver services with reasonable skill, care, and professionalism.</li>
+              <li>Implement security measures to protect user data and service integrity; however, absolute security cannot be guaranteed.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">5. Intellectual Property</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>All content, software, tools, and materials provided by SipraHub are proprietary and protected under intellectual property laws.</li>
+              <li>Users may not copy, modify, distribute, or use any content without prior written consent.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">6. Limitation of Liability</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>SipraHub is not liable for indirect, incidental, or consequential damages arising from the use of our services.</li>
+              <li>Liability for direct damages is limited to the value of services provided under the applicable agreement.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">7. Termination</h2>
+            <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
+              <li>Access to services may be suspended or terminated if a user violates these Terms or engages in unlawful activity.</li>
+              <li>Users may terminate their use by discontinuing access or notifying the company.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">8. Amendments</h2>
             <p className="text-muted-foreground mb-4">
-              All content on this website, including text, graphics, logos, and software, is the property of SipraHub or its licensors and is protected by copyright and other intellectual property laws.
+              These Terms may be updated periodically. Updated versions will be published on our website and take effect immediately upon posting.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Disclaimer</h2>
+            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">9. Governing Law</h2>
             <p className="text-muted-foreground mb-4">
-              Our website and services are provided "as is" without warranties of any kind. We do not guarantee uninterrupted access or that our services will be error-free.
-            </p>
-
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Limitation of Liability</h2>
-            <p className="text-muted-foreground mb-4">
-              To the maximum extent permitted by law, SipraHub shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our website or services.
+              These Terms are governed by the laws of India. Any disputes arising from these Terms will be resolved in the courts of Bengaluru, India.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Contact</h2>
