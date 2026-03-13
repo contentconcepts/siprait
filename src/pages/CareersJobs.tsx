@@ -20,6 +20,11 @@ const CareersJobs = () => {
             {
               label: "Contact Us",
               to: "/contact",
+              variant: "outline",
+            },
+            {
+              label: "Share Resume",
+              to: "/careers/apply",
               variant: "hero",
             },
           ]}

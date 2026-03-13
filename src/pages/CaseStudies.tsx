@@ -5,15 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { 
-  ArrowRight,
-  Filter,
-  X,
-  CheckCircle,
-  Globe
-} from "lucide-react";
+import { ArrowRight, Filter, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
+import { CASE_STUDIES } from "@/data/caseStudies";
 
 const CaseStudies = () => {
   const [selectedFilters, setSelectedFilters] = useState<{
@@ -25,68 +20,10 @@ const CaseStudies = () => {
     useCase: "",
     industry: "",
     businessFunction: "",
-    aiTechnology: ""
+    aiTechnology: "",
   });
 
-  const caseStudies = [
-    {
-      id: 1,
-      title: "Digital Assistant for Clinic - 24/7 Patient Queries",
-      company: "Poorna Neuro",
-      useCase: "24/7 Patient Support",
-      industry: "Healthcare",
-      businessFunction: "Patient Services",
-      aiTechnologies: ["Natural Language Processing", "Voice AI", "Multilingual AI"],
-      problem: "Patients needed doctor, service and location details outside clinic hours, but had no way to get instant answers",
-      solution: "Built 'Dhi', a natural voice and text assistant with low-latency audio for hands-free conversations",
-      outcome: "Instant, accurate answers at any hour, in preferred language and mode",
-      metrics: [
-        { label: "Languages Supported", value: "6" },
-        { label: "Availability", value: "24/7" },
-        { label: "Staff Time Freed", value: "40%" }
-      ],
-      duration: "3 months",
-      team: "5 AI engineers"
-    },
-    {
-      id: 2,
-      title: "AI Service Desk Co-pilot for Insurance",
-      company: "Insurance Company",
-      useCase: "Live Agent Augmentation",
-      industry: "Insurance",
-      businessFunction: "Customer Support",
-      aiTechnologies: ["Natural Language Processing", "Sentiment Analysis", "Knowledge Management"],
-      problem: "Service quality varied in stressful live chats and empathy was inconsistent",
-      solution: "Live analysis of customer intent and sentiment with one-click suggested replies",
-      outcome: "Faster resolutions with fewer errors through real-time co-pilot support",
-      metrics: [
-        { label: "Resolution Time", value: "-30%" },
-        { label: "Service Quality", value: "+45%" },
-        { label: "Training Time", value: "-50%" }
-      ],
-      duration: "2 months",
-      team: "4 AI specialists"
-    },
-    {
-      id: 3,
-      title: "Editorial Management Platform",
-      company: "ContentConcepts Editorial Services",
-      useCase: "End-to-end Manuscript Editing Workflow",
-      industry: "Publishing",
-      businessFunction: "Operations",
-      aiTechnologies: ["Workflow Automation", "Document Management", "Authentication Systems"],
-      problem: "Conflicting role models and unreliable authentication with complex status management",
-      solution: "Built comprehensive web platform with multi-role model, real-time pricing, and automated workflow",
-      outcome: "Streamlined operations through automated assignment and role-based access",
-      metrics: [
-        { label: "User Roles", value: "3" },
-        { label: "Email Templates", value: "7" },
-        { label: "Workflow Automation", value: "100%" }
-      ],
-      duration: "4 months",
-      team: "6 developers"
-    }
-  ];
+  const caseStudies = CASE_STUDIES;
 
   // Extract unique filter options
   const useCases = Array.from(new Set(caseStudies.map(s => s.useCase)));
@@ -99,9 +36,9 @@ const CaseStudies = () => {
     const matchesUseCase = !selectedFilters.useCase || selectedFilters.useCase === "" || selectedFilters.useCase === study.useCase;
     const matchesIndustry = !selectedFilters.industry || selectedFilters.industry === "" || selectedFilters.industry === study.industry;
     const matchesBusinessFunction = !selectedFilters.businessFunction || selectedFilters.businessFunction === "" || selectedFilters.businessFunction === study.businessFunction;
-    const matchesAiTechnology = !selectedFilters.aiTechnology || selectedFilters.aiTechnology === "" || 
+    const matchesAiTechnology = !selectedFilters.aiTechnology || selectedFilters.aiTechnology === "" ||
       study.aiTechnologies.includes(selectedFilters.aiTechnology);
-    
+
     return matchesUseCase && matchesIndustry && matchesBusinessFunction && matchesAiTechnology;
   });
 
@@ -119,7 +56,7 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
         <div
@@ -143,7 +80,7 @@ const CaseStudies = () => {
               <span className="text-orange-300">Domains and Technologies</span>
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-medium">
-              Discover how SipraHub drives measurable success with tailored solutions across 
+              Discover how SipraHub drives measurable success with tailored solutions across
               industries and technologies. See the impact of our AI-powered innovations.
             </p>
           </div>
@@ -281,43 +218,43 @@ const CaseStudies = () => {
                 >
                   <Link to={`/case-studies/${study.id}`} className="block h-full">
                     <CardContent className="p-6 h-full flex flex-col gap-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
-                        {study.useCase}
-                      </Badge>
-                      <Badge variant="secondary" className="text-xs">
-                        {study.industry}
-                      </Badge>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-foreground mb-2 transition-colors group-hover:text-primary">
-                      {study.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">{study.company}</p>
-                    
-                    <div className="space-y-3 flex-1">
-                      <div>
-                        <p className="text-xs font-semibold text-foreground mb-1">Outcome</p>
-                        <p className="text-sm text-muted-foreground">{study.outcome}</p>
+                      <div className="flex items-start justify-between mb-4">
+                        <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/20">
+                          {study.useCase}
+                        </Badge>
+                        <Badge variant="secondary" className="text-xs">
+                          {study.industry}
+                        </Badge>
                       </div>
-                      <div className="flex gap-2 flex-wrap">
-                        {study.aiTechnologies.slice(0, 2).map((tech, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                        {study.aiTechnologies.length > 2 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{study.aiTechnologies.length - 2} more
-                          </Badge>
-                        )}
+
+                      <h3 className="text-xl font-semibold text-foreground mb-2 transition-colors group-hover:text-primary">
+                        {study.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">{study.company}</p>
+
+                      <div className="space-y-3 flex-1">
+                        <div>
+                          <p className="text-xs font-semibold text-foreground mb-1">Outcome</p>
+                          <p className="text-sm text-muted-foreground">{study.outcome}</p>
+                        </div>
+                        <div className="flex gap-2 flex-wrap">
+                          {study.aiTechnologies.slice(0, 2).map((tech, idx) => (
+                            <Badge key={idx} variant="outline" className="text-xs">
+                              {tech}
+                            </Badge>
+                          ))}
+                          {study.aiTechnologies.length > 2 && (
+                            <Badge variant="outline" className="text-xs">
+                              +{study.aiTechnologies.length - 2} more
+                            </Badge>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-center text-primary font-semibold text-sm gap-2">
-                      <span>Read Full Case Study</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </CardContent>
+                      <div className="flex items-center text-primary font-semibold text-sm gap-2">
+                        <span>Read Full Case Study</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </CardContent>
                   </Link>
                 </Card>
               ))}
@@ -327,13 +264,13 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
+      <section className="py-20 bg-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Create Your Success Story?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join the growing list of successful businesses that have transformed 
+            Join the growing list of successful businesses that have transformed
             their operations with SipraHub's AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

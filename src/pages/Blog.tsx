@@ -1,3 +1,5 @@
+import { useState, FormEvent } from "react";
+import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -23,77 +25,24 @@ import missionImage from "@/assets/mission-vision.jpg";
 import teamImage from "@/assets/team-collaboration.jpg";
 import cybersecurityImage from "@/assets/cybersecurity-hero.jpg";
 import aboutImage from "@/assets/about-hero.jpg";
+import { blogPosts, slugify } from "@/data/blogPosts";
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "AI Trends 2025: The Future of Artificial Intelligence in Business",
-      excerpt: "Discover the latest AI innovations that are reshaping industries and transforming business operations. From generative AI to edge computing, explore what's coming next.",
-      author: "Sarah Chen",
-      date: "January 15, 2025",
-      readTime: "8 min read",
-      category: "AI Trends",
-      tags: ["AI", "Technology Trends", "Business Innovation"],
-      image: missionImage,
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Legacy System Modernization: A Complete Guide to Digital Transformation",
-      excerpt: "Learn how to successfully modernize legacy systems with AI-driven approaches. Discover strategies, best practices, and real-world case studies from our experts.",
-      author: "Michael Rodriguez",
-      date: "January 12, 2025",
-      readTime: "12 min read",
-      category: "Digital Transformation",
-      tags: ["Legacy Systems", "Modernization", "AI Integration"],
-      image: teamImage
-    },
-    {
-      id: 3,
-      title: "Cybersecurity Best Practices: How AI Enhances Threat Detection",
-      excerpt: "Explore how artificial intelligence is revolutionizing cybersecurity. Learn about AI-powered threat detection, automated response systems, and proactive security measures.",
-      author: "David Park",
-      date: "January 10, 2025",
-      readTime: "10 min read",
-      category: "Cybersecurity",
-      tags: ["AI Security", "Threat Detection", "Best Practices"],
-      image: cybersecurityImage
-    },
-    {
-      id: 4,
-      title: "Agile vs. Waterfall: Choosing the Right Development Methodology",
-      excerpt: "A comprehensive comparison of Agile and Waterfall methodologies. Understand when to use each approach and how to optimize your development process for maximum efficiency.",
-      author: "Lisa Thompson",
-      date: "January 8, 2025",
-      readTime: "7 min read",
-      category: "Development",
-      tags: ["Agile", "Waterfall", "Project Management"],
-      image: teamImage
-    },
-    {
-      id: 5,
-      title: "Cloud Migration Strategies: Moving to the Cloud Successfully",
-      excerpt: "Navigate your cloud migration journey with confidence. Learn about different migration strategies, common pitfalls to avoid, and how to ensure a smooth transition.",
-      author: "James Wilson",
-      date: "January 5, 2025",
-      readTime: "9 min read",
-      category: "Cloud Computing",
-      tags: ["Cloud Migration", "Infrastructure", "Best Practices"],
-      image: heroImage
-    },
-    {
-      id: 6,
-      title: "Machine Learning in Healthcare: Transforming Patient Care",
-      excerpt: "Discover how machine learning is revolutionizing healthcare delivery. Explore real-world applications, success stories, and the future of AI in medical diagnosis and treatment.",
-      author: "Dr. Maria Garcia",
-      date: "January 3, 2025",
-      readTime: "11 min read",
-      category: "Healthcare AI",
-      tags: ["Machine Learning", "Healthcare", "Medical AI"],
-      image: aboutImage
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+
+  const handleNewsletterSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) {
+      toast.error("Please enter your email address.");
+      return;
     }
-  ];
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterEmail)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    setNewsletterEmail("");
+    toast.success("Thanks for subscribing! We'll send you our latest insights.");
+  };
 
   const categories = [
     { name: "AI Trends", count: 15, icon: TrendingUp },
@@ -153,11 +102,14 @@ const Blog = () => {
               and practical knowledge for your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
-              <Button variant="glass" size="xl" className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm" asChild>
-                <Link to="/contact">
-                  Subscribe to Newsletter
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
+              <Button
+                variant="glass"
+                size="xl"
+                className="text-xl font-semibold px-8 py-4 border-2 border-white/40 shadow-lg backdrop-blur-sm"
+                onClick={() => document.getElementById("newsletter-signup")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Subscribe to Newsletter
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
               <Button variant="outline-white" size="xl" asChild>
                 <Link to="/resources">
@@ -220,8 +172,8 @@ const Blog = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button size="lg" className="text-lg font-semibold px-6 py-3 text-primary hover:text-primary/80 shadow-lg border border-primary/20" asChild>
-                    <Link to="/blog/ai-trends-2025">
+                  <Button size="lg" className="text-lg font-semibold px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg" asChild>
+                    <Link to={`/blog/${slugify(blogPosts[0].title)}`}>
                       Read Full Article
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -320,26 +272,28 @@ const Blog = () => {
               </h3>
               <div className="space-y-4">
                 {categories.map((category, index) => (
-                  <Card key={index} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group">
-                    <CardContent className="p-6">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
-                            <category.icon className="h-6 w-6 text-primary" />
+                  <Link key={index} to={`/blog?category=${encodeURIComponent(category.name)}`}>
+                    <Card className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group h-full">
+                      <CardContent className="p-6">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4">
+                            <div className="p-3 rounded-lg bg-muted group-hover:scale-110 transition-bounce">
+                              <category.icon className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground group-hover:text-primary transition-smooth">
+                                {category.name}
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                {category.count} articles
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground group-hover:text-primary transition-smooth">
-                              {category.name}
-                            </h4>
-                            <p className="text-sm text-muted-foreground">
-                              {category.count} articles
-                            </p>
-                          </div>
+                          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth flex-shrink-0" />
                         </div>
-                        <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -380,7 +334,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20">
+      <section id="newsletter-signup" className="py-20 scroll-mt-24 bg-gradient-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Stay Updated with Our Latest Insights
@@ -388,16 +342,19 @@ const Blog = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Subscribe to our newsletter and get the latest articles, insights, and resources delivered to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              aria-label="Email for newsletter subscription"
             />
-            <Button size="xl" className="text-xl font-semibold px-8 py-4 text-primary hover:text-primary/80 shadow-lg border border-primary/20">
+            <Button type="submit" size="xl" className="text-xl font-semibold px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
               Subscribe
             </Button>
-          </div>
+          </form>
         </div>
       </section>
 

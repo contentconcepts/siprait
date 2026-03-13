@@ -19,28 +19,28 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="text-white" style={{ backgroundColor: '#ce2124' }}>
+    <footer className="text-white bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <p className="text-white/80 mb-6 leading-relaxed">
-              Your trusted partner for AI-driven digital transformation, 
+              Your trusted partner for AI-driven digital transformation,
               delivering innovative solutions that drive measurable business growth.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/company/siprahub/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/company/siprahub/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white transition-colors"
                 aria-label="Follow us on LinkedIn"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a 
-                href="https://x.com/SipraHub" 
-                target="_blank" 
+              <a
+                href="https://x.com/SipraHub"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white transition-colors"
                 aria-label="Follow us on Twitter"
@@ -56,8 +56,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.href}>
-                  <Link 
-                    to={service.href} 
+                  <Link
+                    to={service.href}
                     className="text-white/80 hover:text-white transition-smooth text-sm"
                   >
                     {service.name}
@@ -73,8 +73,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.href}>
-                  <Link 
-                    to={item.href} 
+                  <Link
+                    to={item.href}
                     className="text-white/80 hover:text-white transition-smooth text-sm"
                   >
                     {item.name}

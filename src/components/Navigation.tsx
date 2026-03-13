@@ -8,6 +8,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
+  const isServicesActive = location.pathname.startsWith("/services/");
   const services = [{
     name: "Software Development",
     href: "/services/software-development"
@@ -40,7 +41,7 @@ const Navigation = () => {
             
             {/* Services Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground hover:text-primary transition-smooth">
+              <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-medium transition-smooth ${isServicesActive ? "text-primary" : "text-foreground hover:text-primary"}`}>
                 Services <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
@@ -51,24 +52,11 @@ const Navigation = () => {
                   </Link>
                 </DropdownMenuItem>
                 
-                        {/* AI Services with submenu */}
-                        <DropdownMenuSub>
-                          <DropdownMenuSubTrigger className="flex items-center">
-                            AI Services
-                          </DropdownMenuSubTrigger>
-                          <DropdownMenuSubContent>
-                            <DropdownMenuItem asChild>
-                              <Link to="/services/ai-services" className="w-full">
-                                AI Solutions
-                              </Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                              <Link to="/services/ai-advisory-consulting" className="w-full">
-                                AI Advisory & Consulting
-                              </Link>
-                            </DropdownMenuItem>
-                          </DropdownMenuSubContent>
-                        </DropdownMenuSub>
+                <DropdownMenuItem asChild>
+                  <a href="https://aiquire.siprahub.com" className="w-full">
+                    AI Services
+                  </a>
+                </DropdownMenuItem>
                 
                 {/* Other services */}
                 {services.filter(service => service.name !== "Software Development").map(service => <DropdownMenuItem key={service.href} asChild>
@@ -93,7 +81,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="w-12 h-12 border border-primary/20">
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="w-12 h-12 min-h-[44px] min-w-[44px] border border-primary/20" aria-label={isOpen ? "Close menu" : "Open menu"}>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
@@ -116,16 +104,9 @@ const Navigation = () => {
                 Software Development
               </Link>
               
-                      {/* AI Services section */}
-                      <div className="pl-4 space-y-2">
-                        <span className="block text-sm font-medium text-muted-foreground">AI Services</span>
-                        <Link to="/services/ai-services" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
-                          AI Solutions
-                        </Link>
-                        <Link to="/services/ai-advisory-consulting" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
-                          AI Advisory & Consulting
-                        </Link>
-                      </div>
+              <a href="https://aiquire.siprahub.com" className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>
+                AI Services
+              </a>
               
               {/* Other services */}
               {services.filter(service => service.name !== "Software Development").map(service => <Link key={service.href} to={service.href} className="block pl-4 text-sm text-foreground hover:text-primary transition-smooth" onClick={() => setIsOpen(false)}>

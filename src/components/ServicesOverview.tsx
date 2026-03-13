@@ -1,55 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Brain, Users, Shield, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { homepageServices } from "@/data/services";
 
 const ServicesOverview = () => {
-  const services = [
-    {
-      icon: Code,
-      title: "Software Development",
-      description: "Custom applications, legacy modernization, and scalable solutions with AI integration.",
-      features: [
-        "Domain-Agnostic Expertise",
-        "Technology-Agnostic Solutions",
-        "On-Prem & ODC Setup"
-      ],
-      link: "/services/software-development"
-    },
-    {
-      icon: Brain,
-      title: "AI Services & Consulting",
-      description: "Custom AI development, machine learning models, intelligent automation solutions, and strategic AI consulting.",
-      features: [
-        "Custom ML Models",
-        "Computer Vision & NLP",
-        "AI Strategy & Consulting"
-      ],
-      link: "/services/ai-services"
-    },
-    {
-      icon: Users,
-      title: "Cloud & Infrastructure",
-      description: "Comprehensive cloud solutions and infrastructure services for scalable business growth.",
-      features: [
-        "Cloud Setup & Migration",
-        "Infrastructure Management",
-        "Scalable Solutions"
-      ],
-      link: "/services/cloud-infra"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "AI-enhanced threat detection, vulnerability assessments, and comprehensive security solutions.",
-      features: [
-        "AI-Driven Security Assessment",
-        "Penetration Testing & VAPT",
-        "Cloud Security"
-      ],
-      link: "/services/cybersecurity"
-    }
-  ];
 
   return (
     <section className="py-20 bg-gradient-subtle">
@@ -66,7 +21,7 @@ const ServicesOverview = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {services.map((service, index) => (
+          {homepageServices.map((service, index) => (
             <Card 
               key={index} 
               className="bg-gradient-card border border-primary/10 shadow-card hover:shadow-hero hover:border-primary/20 transition-smooth group"

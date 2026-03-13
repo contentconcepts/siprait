@@ -50,7 +50,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
         <div
@@ -103,9 +103,9 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="relative">
-              <img 
-                src={teamCollaboration} 
-                alt="Team collaboration and innovation" 
+              <img
+                src={teamCollaboration}
+                alt="Team collaboration and innovation"
                 className="rounded-2xl shadow-hero w-full"
               />
             </div>
@@ -118,9 +118,9 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <img 
-                src={missionVision} 
-                alt="Mission and vision visualization" 
+              <img
+                src={missionVision}
+                alt="Mission and vision visualization"
                 className="rounded-2xl shadow-hero w-full"
               />
             </div>
@@ -159,7 +159,7 @@ const AboutUs = () => {
               The values that guide everything we do
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="bg-gradient-card border-0 shadow-card hover:shadow-hero transition-smooth group text-center">
@@ -191,14 +191,14 @@ const AboutUs = () => {
               Our strength lies in the complementary expertise of our leadership team
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={index} className="bg-white border-0 shadow-card hover:shadow-hero transition-smooth group">
                 <CardContent className="p-8 text-center">
                   <div className="relative mb-6">
-                    <img 
-                      src={member.image} 
+                    <img
+                      src={member.image}
                       alt={`${member.name} headshot`}
                       className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg"
                     />
@@ -236,7 +236,7 @@ const AboutUs = () => {
               Our <span className="text-primary">Approach</span>
             </h2>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -261,7 +261,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="py-20" style={{ backgroundColor: '#5B5B5B' }}>
+      <section className="py-20 bg-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Join Our Team?
@@ -277,7 +277,7 @@ const AboutUs = () => {
               </Link>
             </Button>
             <Button variant="outline-white" size="lg" asChild>
-              <Link to="/careers/jobs" className="text-white">
+              <Link to="/careers/apply" className="text-white">
                 Send Your Resume
               </Link>
             </Button>
@@ -287,6 +287,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+
 
       <Footer />
     </div>
