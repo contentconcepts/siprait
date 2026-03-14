@@ -1,4 +1,4 @@
-﻿import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
@@ -71,7 +71,7 @@ const CaseStudiesSection = () => {
         </div>
 
         <div className="text-center space-y-6">
-          <Button variant="hero" size="lg" asChild>
+          <Button variant="default" size="lg" asChild>
             <Link to="/case-studies">
               View All Case Studies
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -92,8 +92,3 @@ const CaseStudiesSection = () => {
 };
 
 export default CaseStudiesSection;
-
-
-const CaseStudiesSection = () => {
-  const caseStudies = [
-    {
